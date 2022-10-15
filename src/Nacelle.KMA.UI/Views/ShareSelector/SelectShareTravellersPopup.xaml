@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Views"
+    x:Class="Nacelle.KMA.UI.Views.SelectShareTravellersPopup">
+    <local:SelectShareTravellersView 
+        x:Name="selectShareTravellersView"
+        VerticalOptions="Start" 
+        HorizontalOptions="End"
+        Margin="20,100,20,0"
+        TravellerItems="{Binding TravellerItems}"
+        ShareCommand="{Binding ShareBoardingPassCommand}" />
+</rg:PopupPage >

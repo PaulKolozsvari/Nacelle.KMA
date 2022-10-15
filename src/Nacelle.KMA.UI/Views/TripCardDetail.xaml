@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views;assembly=Nacelle.KMA.UI"
+    x:Class="Nacelle.KMA.UI.Views.TripCardDetail"
+    x:Name="this">
+    <StackLayout Spacing="0">
+        <Frame Margin="0" Style="{StaticResource BoxedBordered}">
+            <StackLayout Orientation="Horizontal">
+                <ffimageloadingsvg:SvgCachedImage Source="resource://Nacelle.KMA.UI.Resources.Images.icon-plane.svg" 
+                                                  HeightRequest="25" 
+                                                  WidthRequest="50"
+                                                  Margin="0, 10, 5, 10"
+                                                  VerticalOptions="Center" 
+                                                  HorizontalOptions="Start" 
+                                                  Opacity="0.4"/>
+                <StackLayout Spacing="2" HorizontalOptions="StartAndExpand">
+                    <Label Style="{StaticResource TripCardHeading2}" Text="{Binding Caption, Source={x:Reference this}}" VerticalOptions="CenterAndExpand" />
+                    <Label Style="{StaticResource TripCardContent}" Text="{Binding Number, Source={x:Reference this}}" VerticalOptions="CenterAndExpand" />
+                    <Label Style="{StaticResource TripCardContent}" Text="{Binding FlightDateTime, Source={x:Reference this}}" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <ffimageloadingsvg:SvgCachedImage VerticalOptions="Center" 
+                                                  HorizontalOptions="End"
+                                                  HeightRequest="15" 
+                                                  Margin="0, 10, 5, 10"
+                                                  Source="resource://Nacelle.KMA.UI.Resources.Images.arrowhead-right-gray.svg"/>                
+            </StackLayout>
+        </Frame>
+        <StackLayout x:Name="ButtonStack" HorizontalOptions="FillAndExpand" Spacing="0">
+            <skiaforms:SKCanvasView BackgroundColor="{StaticResource PrimaryWhite}"
+                PaintSurface="OnCanvasViewPaintSurface" 
+                HorizontalOptions="FillAndExpand" 
+                IsVisible="{Binding CheckInButtonIsVisible, Source={x:Reference this}}"
+                Margin="5, 0"
+                HeightRequest="0.7"  />
+            <Frame Style="{StaticResource TripCardButton}" IsVisible="{Binding CheckInButtonIsVisible, Source={x:Reference this}}">
+                <Button Image="CheckInWhite" Style="{StaticResource PrimaryButtonMedium}" Text="CHECK-IN NOW" Command="{Binding CheckInCommand, Source={x:Reference this}}" />
+            </Frame>
+           <skiaforms:SKCanvasView BackgroundColor="{StaticResource PrimaryWhite}"
+                PaintSurface="OnCanvasViewPaintSurface" 
+                HorizontalOptions="FillAndExpand" 
+                IsVisible="{Binding ViewBoardingPassButtonIsVisible, Source={x:Reference this}}"
+                Margin="5, 0"
+                HeightRequest="0.7"  />
+            <Frame Style="{StaticResource TripCardButton}" IsVisible="{Binding ViewBoardingPassButtonIsVisible, Source={x:Reference this}}" >
+                <Button Image="QRCodeWhite" Style="{StaticResource PrimaryButtonMedium}" Text="VIEW BOARDING PASS"  Command="{Binding ViewBoardingPassCommand, Source={x:Reference this}}" />
+            </Frame>
+        </StackLayout>
+        <StackLayout.GestureRecognizers>
+             <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding FlightDetailCommand, Source={x:Reference this}}" CommandParameter="{Binding Number, Source={x:Reference this}}"/>
+        </StackLayout.GestureRecognizers> 
+    </StackLayout>
+</ContentView>

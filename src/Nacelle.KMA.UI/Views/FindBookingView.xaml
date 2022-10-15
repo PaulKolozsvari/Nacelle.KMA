@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+             xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+             xmlns:effects="clr-namespace:Nacelle.KMA.UI.Effects"
+             x:Class="Nacelle.KMA.UI.Views.FindBookingView"
+             x:Name="this">
+    <StackLayout Spacing="0">
+        <Label
+               Style="{StaticResource Heading5}"
+               Text="{Binding Description, Source={x:Reference this}}" />
+        <Frame Style="{StaticResource EntryFrame}">
+            <views:ValidationEntry x:Name="BookingReferenceEntry"
+                               Style="{StaticResource PrimaryEntry}"
+                               Placeholder="Booking reference"
+                               Keyboard="Text"
+                               Text="{Binding BookingReference, Source={x:Reference this}}"
+                               MaxLength="6"
+                               ReturnType="Next"
+                               Completed="OnBookingReferenceCompleted">
+                <Entry.Behaviors>
+                    <behaviors:ValidationListenerBehavior PropertyName="{Binding ValidationPropertyNameBookingReference, Source={x:Reference this}}" />
+                </Entry.Behaviors>
+            </views:ValidationEntry>
+        </Frame>
+        <Frame Style="{StaticResource EntryFrame}">
+            <views:ValidationEntry x:Name="LastNameEntry"
+                               Style="{StaticResource PrimaryEntry}"
+                               Placeholder="Last name"
+                               Text="{Binding LastName, Source={x:Reference this}}"
+                               ReturnType="Go"
+                               Completed="OnLastNameCompleted">
+                <Entry.Behaviors>
+                    <behaviors:ValidationListenerBehavior PropertyName="{Binding ValidationPropertyNameLastName, Source={x:Reference this}}" />
+                </Entry.Behaviors>
+            </views:ValidationEntry>
+        </Frame>
+        <Frame Style="{StaticResource ButtonSpacing}">
+        <Button Style="{StaticResource PrimaryButtonLarge}"
+                Text="{Binding ButtonTitle, Source={x:Reference this}}"
+                Command="{Binding FindBookingCommand, Source={x:Reference this}}" />
+        </Frame>
+    </StackLayout>
+</ContentView>

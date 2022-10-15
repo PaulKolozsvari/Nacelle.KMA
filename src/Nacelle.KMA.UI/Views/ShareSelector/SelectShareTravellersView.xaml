@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Mvx:MvxContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Views"
+    x:Class="Nacelle.KMA.UI.Views.SelectShareTravellersView">
+    <Frame>
+        <StackLayout>
+            <Label Style="{StaticResource Heading2}" Text="Share Boarding Passes" />
+            <Label 
+          Style="{StaticResource MessageCopy}"
+          Text="Select the travellers who's boarding passes you'd like to share." />
+            <StackLayout 
+            x:Name="shareTravellerSelectorLayout" 
+            BindableLayout.ItemsSource="{Binding TravellerItems}"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="0,5,0,0" Orientation="Horizontal">
+                            <local:CheckLabel Margin="0,0,10,0" FontSize="30" IsChecked="{Binding DoShare, Mode=TwoWay}" />
+                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" Style="{StaticResource Heading5}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            <BoxView BackgroundColor="Silver" HeightRequest="1" VerticalOptions="End" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Text="SHARE" Style="{StaticResource PrimaryButtonMedium}" Margin="0" Clicked="ShareClicked" />
+                <Button Grid.Column="0" Text="CANCEL" Style="{StaticResource SecondaryButtonMedium}" Margin="0" Clicked="CancelClicked" />                
+            </Grid>
+        </StackLayout>
+    </Frame>
+</Mvx:MvxContentView>

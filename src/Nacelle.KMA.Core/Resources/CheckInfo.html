@@ -1,0 +1,81 @@
+﻿
+<script language="javascript">
+  var hasScrolled = false;
+
+  function hasScrolledCallBack() {
+    return hasScrolled;
+  }
+
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+       hasScrolled = true;
+    }
+  };
+</script>
+
+<style>
+  @font-face{font-family:'opensans';src:'https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic'}
+  *{    
+    background-color: #FFFFFF; font-size: 16px; color: #666666; font-family: opensans, Fallback, sans-serif;    
+  }
+  a{color:#8BC63E}
+</style>
+
+<div style="padding:10px">
+  <div style="height: 60px; line-height: 60px;">
+    
+  <img style="vertical-align:middle" src="data:<MIMETYPE>;base64,<BASE64_ENCODED_IMAGE>" height="40" width="40" />
+  <span style="vertical-align: middle;  padding-left: 5px; font-size: 14pt" class="vertical-centered">scroll down to accept the terms</span>
+</div>
+
+  <h3>
+    Important information
+  </h3>
+  <div>
+    <ul>
+      <li>Online check-in opens 24 hours before your flight and closes 1 hour prior to your departure.</li>
+      <li>A valid ID book, driver's licence or passport must be presented at check-in and the boarding gate.</li>
+      <li>
+        Boarding passes can be accessed electronically through the kulula travel app or our self-service online check-in website.
+        Boarding passes can also be printed at the self-service kiosk or obtained at check-in counters.
+      </li>
+      <li>
+        Minors younger than 18 years of age travelling to or from South Africa need to travel with the
+        necessary documentation including an unabridged birth certificate.
+      </li>
+      <li>
+        Hand baggage allowance consists of one bag of 7kg (dimensions: 36 x 23 x 56cm, including handles, pockets and wheels)
+        plus a slimline laptop bag or small hand bag. Should your hand baggage exceed these specifications, you will be sent
+        back to check-in to purchase an extra 20kg bag at the airport.
+      </li>
+      <li>
+        Checked baggage allowance is one free bag no heavier than 20kg (dimensions: 75 x 43 x 90cm, including handles, pockets and wheels).
+        Additional bags will be charged for at a per bag fee at the airport or can be purchased online up to 2 hours before departure
+        at a reduced cost. Bags weighing between 20-32kg are subject to a heavy bag fee.
+      </li>
+      <li>
+        Your checked bags must be dropped off before airport check-in closes at least 45 minutes prior to
+        departure for domestic flights and 60 minutes prior to departure for international flights.
+      </li>
+      <li>Seats may change if there is an aircraft change.</li>
+    </ul>
+  </div>
+
+  <div>
+    <h4>Baggage security questions</h4>
+    <p>Please review and confirm the below statements*</p>
+    <ul>
+      <li>I'm travelling with my own luggage.</li>
+      <li>I've packed my own bags, no one else helped me pack or packed on my behalf.</li>
+      <li>If I'm carrying something on behalf of someone else, I'm well aware of its contents.</li>
+      <li>Any sharp or harmful articles I may have packed are not in my hand luggage but in my checked baggage.</li>
+      <li>I do not have any dangerous goods in my baggage</li>
+      <li>
+        If I'm carrying Lithium-Ion batteries, I am not carrying more than two(2) spare batteries and they are
+        packed in insulated packaging and placed in my cabin baggage only.
+      </li>
+      <li>If I am carrying E-cigarettes, they will remain unused at all times an in my carry-on baggage only</li>
+    </ul>
+    <p>*If any of the statements are false please check in at the kulula check-in counters.</p>
+  </div>
+  </div>

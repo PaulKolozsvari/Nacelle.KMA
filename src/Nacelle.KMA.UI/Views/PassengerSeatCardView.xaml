@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    x:Class="Nacelle.KMA.UI.Views.PassengerSeatCardView">
+    <ContentView.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource Container}"
+                    x:Name="tarvellerItems"
+                    BindableLayout.ItemsSource="{Binding TravellerItems}"
+                    Spacing="10"                    Margin="20, 10, 20, 5">                <BindableLayout.ItemTemplate>                    <DataTemplate>                        <StackLayout Spacing="0">                            <Frame Style="{StaticResource BoxedBordered}" Margin="0">                                <Grid>                                    <Grid.RowDefinitions>                                        <RowDefinition Height="Auto"/>                                        <RowDefinition Height="Auto"/>                                    </Grid.RowDefinitions>                                    <Grid.ColumnDefinitions>                                        <ColumnDefinition Width="60"/>                                        <ColumnDefinition Width="*"/>                                    </Grid.ColumnDefinitions>                                    <Label Grid.ColumnSpan="2" Text="{Binding Name}" />                                    <ffimageloadingsvg:SvgCachedImage Grid.Row="1" Source="resource://Nacelle.KMA.UI.Resources.Images.icon-passenger-seated.svg" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="24" />                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding SeatDescription, Converter={StaticResource StringFormat}, ConverterParameter='{0}'}" FontSize="24" VerticalOptions="Center" />                                </Grid>                            </Frame>                            <views:HorizontalDashedLinesView />                            <Frame Style="{StaticResource TripCardButton}">                                <Button                                        Image="QRCodeWhite"                                        Style="{StaticResource PrimaryButtonMedium}"                                        Text="VIEW BOARDING PASS"                                        Command="{Binding Path=BindingContext.ViewBoardingPassCommandTravellerItem, Source={x:Reference tarvellerItems}}"                                        CommandParameter="{Binding}"/>                            </Frame>                        </StackLayout>                    </DataTemplate>                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

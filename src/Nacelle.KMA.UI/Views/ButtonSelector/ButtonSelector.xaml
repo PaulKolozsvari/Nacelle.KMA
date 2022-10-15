@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Nacelle.KMA.UI.Views.ButtonSelector"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Views"
+    x:Name="buttonSelector">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:SelectedButtonSelectorIndexToBoolValueConverter x:Key="SelectedButtonSelectorIndexToBool" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout
+            x:Name="buttonSelectorLayout"
+            Orientation="Horizontal"
+            Spacing="0"
+            HorizontalOptions="FillAndExpand">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <local:ButtonSelectorItemView
+                        x:Name="buttonSelectorItem"
+                        Text="{Binding Value}"
+                        Index="{Binding Key}"
+                        Tapped="OnButtonSelectorItemTapped"
+                        IsActive="{Binding Path=SelectedIndex, Source={x:Reference Name=buttonSelector}, Converter={StaticResource SelectedButtonSelectorIndexToBool}, ConverterParameter={x:Reference buttonSelectorItem}}" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

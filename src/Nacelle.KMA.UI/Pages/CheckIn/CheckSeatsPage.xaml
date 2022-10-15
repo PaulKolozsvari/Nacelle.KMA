@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage
+    x:TypeArguments="viewModels:CheckSeatsViewModel"
+    x:Class="Nacelle.KMA.UI.Pages.CheckSeatsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    Title="Check-In"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Cancel"
+            Command="{Binding CancelCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ProgressBar
+                Progress="0.8"
+                ProgressColor="{StaticResource PrimaryBlue}"/>
+            <ScrollView Grid.Row="1">
+                <StackLayout
+                    VerticalOptions="StartAndExpand"
+                    BindableLayout.ItemsSource="{Binding CheckSeatBookingItems}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Spacing="0">
+                                <local:BookingCheckInHeaderView />
+                                <StackLayout
+                                Style="{StaticResource Container}"
+                                VerticalOptions="StartAndExpand"
+                                x:Name="bookingItemsStack"
+                                Spacing="0">
+                                <views:SuccessInfoView
+                                    IsVisible="{Binding SeatUpdated}"
+                                    PrimaryText="Your seats have been updated" />
+                                <Label
+                                    IsVisible="{Binding SeatUpdated, Converter={StaticResource InverseBoolean}}"
+                                    Text="Please select your preferred seat"
+                                    Style="{StaticResource Heading3}"
+                                    Margin="0,0,0,5"/>
+                                <StackLayout
+                                    x:Name="travellerStack"
+                                    BindableLayout.ItemsSource="{Binding TravellerItems}">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Spacing="0">
+                                                <Frame Style="{StaticResource BoxedBordered}" Margin="0">
+                                                    <StackLayout>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="30" />
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="AUTO" />
+                                                                <RowDefinition Height="AUTO" />
+                                                            </Grid.RowDefinitions>
+                                                            <Label
+                                                                Grid.Column="0"
+                                                                Grid.ColumnSpan="2"
+                                                                Style="{StaticResource Heading4}"
+                                                                Text="{Binding Name}"
+                                                                VerticalTextAlignment="Center"/>
+                                                            <ffimageloadingsvg:SvgCachedImage
+                                                                Grid.Row="1"
+                                                                Source="resource://Nacelle.KMA.UI.Resources.Images.icon-passenger-seated.svg"
+                                                                VerticalOptions="Center"
+                                                                HorizontalOptions="Center"
+                                                                WidthRequest="18" />
+                                                            <Label
+                                                                Grid.Row="1"
+                                                                Grid.Column="1"
+                                                                Style="{StaticResource Heading5}"
+                                                                Text="{Binding SeatDescription}"
+                                                                VerticalTextAlignment="Center" />
+                                                        </Grid>
+                                                        <Grid IsVisible="{Binding HasInfant}">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="30" />
+                                                                <ColumnDefinition />
+                                                            </Grid.ColumnDefinitions>
+                                                             <ffimageloadingsvg:SvgCachedImage Source="resource://Nacelle.KMA.UI.Resources.Images.icon-passenger-infant.svg"
+                                                                                                      VerticalOptions="Center"
+                                                                                                      HorizontalOptions="Center"
+                                                                                                      WidthRequest="18" />
+                                                            <Label
+                                                                Grid.Column="1"
+                                                                Text="{Binding InfantName}"
+                                                                TextColor="{StaticResource PrimaryGrey}"
+                                                                VerticalTextAlignment="Center" />
+                                                        </Grid>
+                                                    </StackLayout>
+                                                </Frame>
+                                                <views:HorizontalDashedLinesView />
+                                                <Frame Style="{StaticResource BoxedBordered}" Margin="0" IsVisible="{Binding ViewBoardingPassButtonIsVisible}">
+                                                <Button
+                                                    Grid.Row="2"
+                                                    HeightRequest="35"
+                                                    Grid.ColumnSpan="2"
+                                                    Style="{StaticResource SecondaryButtonMedium}"
+                                                    Text="SELECT / CHANGE SEAT"
+                                                    Command="{Binding Path=BindingContext.SelectSeatCommand, Source={x:Reference bookingItemsStack}}"
+                                                    CommandParameter="{Binding}" />
+                                                </Frame>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Grid VerticalOptions="EndAndExpand" Style="{StaticResource Container}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="{StaticResource PrimaryWhite}" />
+                <Button
+                    Grid.Row="0"
+                    x:Name="NextButton"
+                    Style="{StaticResource PrimaryButtonLarge}"
+                    Text="CHECK-IN"
+                    mvx:Bi.nd="IsEnabled IsNextEnabled"
+                    Command="{Binding CheckInCommand}" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</local:BaseContentPage>

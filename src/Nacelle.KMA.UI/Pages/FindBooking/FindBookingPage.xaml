@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage x:TypeArguments="viewModels:FindBookingViewModel"
+                       x:Class="Nacelle.KMA.UI.Pages.FindBookingPage"
+                       xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+                       xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+                       xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+                       xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+                       NavigationPage.HasNavigationBar="false"
+                       ios:Page.UseSafeArea="true"
+                       Icon="TabIconHome"
+                       Visual="Material">
+    <StackLayout Style="{StaticResource Container}">
+        <views:BackNavButton />
+        <Label Text="Find a booking"
+               Style="{StaticResource Heading1}" />
+        <views:FindBookingView Description="Enter your flight booking details as shown on your confirmation document."
+                               BookingReference="{Binding BookingReference}"
+                               ValidationPropertyNameBookingReference="BookingReference"
+                               LastName="{Binding LastName}"
+                               ValidationPropertyNameLastName="LastName"
+                               ButtonTitle="FIND BOOKING"
+                               FindBookingCommand="{Binding FindBookingCommand}" />
+        <views:ErrorView 
+            IsVisible="{Binding ErrorMessage, Converter={StaticResource NotNullOrEmptyString}}"
+            ErrorMessage="{Binding ErrorMessage}" />
+    </StackLayout>
+</local:BaseContentPage>

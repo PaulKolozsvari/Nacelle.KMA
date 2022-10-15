@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cards:CoverFlowView xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+                     xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+                     x:Class="Nacelle.KMA.UI.Views.TripCardWithBannerCoverFlowView"
+                     IsCyclical="false"
+                     x:Name="this">
+    <cards:CoverFlowView.ItemTemplate>
+        <DataTemplate>
+            <views:TripCardWithBanner HeaderImage="{Binding To, Converter={StaticResource StringFormat}, ConverterParameter='CityHeader{0}'}"
+                                      To="{Binding To}"
+                                      From="{Binding From}"
+                                      Caption="{Binding Caption}"
+                                      FlightNumber="{Binding Number}"
+                                      FlightDateTime="{Binding FlightDateTimeSpan}"
+                                      IsCheckInButtonVisible="{Binding IsCheckInVisible}"
+                                      CheckInCommand="{Binding CheckInCommand}"
+                                      IsViewBoardingPassButtonVisible="{Binding IsViewBoardingPassVisible}"
+                                      ViewBoardingPassCommand="{Binding ViewBoardingPassCommand}"
+                                      FlightDetailsCommand="{Binding FlightDetailCommand}" />
+        </DataTemplate>
+    </cards:CoverFlowView.ItemTemplate>
+</cards:CoverFlowView>

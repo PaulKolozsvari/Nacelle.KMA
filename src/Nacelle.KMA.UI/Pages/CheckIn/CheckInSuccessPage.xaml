@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:CheckInSuccessViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.CheckInSuccessPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"    
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    NavigationPage.HasBackButton="false"
+    Title="Check-In"
+    Visual="Material">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ProgressBar Progress="1" ProgressColor="{StaticResource PrimaryBlue}"  />
+            <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never">
+                <StackLayout Style="{StaticResource Container}">
+                    <views:SuccessInfoView PrimaryText="Check-in successful" SecondaryText="Drop your luggage off at the 'bag drop off' zone before going through security." />
+                    <Button Image="QRCodeWhite" Style="{StaticResource PrimaryButtonMedium}" Margin="0,5" Text="VIEW BOARDING PASS" Command="{Binding ViewBoardingPassCommand}" />
+                    <Frame Style="{StaticResource BoxedBordered}" Margin="0">
+                        <StackLayout>
+                            <Label Style="{StaticResource MessageCopy}" Text="We store copies of all your boarding passes when checking in on the kulula travel app. These are available under 'My trips' for your convenience. You can alternatively share or store them here:" />
+                            <Button Style="{StaticResource SecondaryButtonMedium}" Text="SHARE BOARDING PASS" Clicked="Share_Clicked" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <Grid Grid.Row="2" VerticalOptions="EndAndExpand" Style="{StaticResource Container}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="{StaticResource PrimaryWhite}" />
+                <Button Grid.Row="0" Style="{StaticResource TransparentButtonLarge}" Text="CHECK-IN FOR NEXT FLIGHT" Command="{Binding CheckInNextFlightCommand}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</local:BaseContentPage>

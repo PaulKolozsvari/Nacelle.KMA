@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:CheckInfoViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.CheckInfoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    Title="Check-In"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel"  Command="{Binding CancelCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ProgressBar Progress="0.2" ProgressColor="{StaticResource PrimaryBlue}" />
+            <WebView x:Name="EmbeddedBrowser" Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+                <WebView.Source>
+                     <HtmlWebViewSource Html="{Binding HtmlContent}"  BaseUrl="{Binding BaseUrl}" />
+                </WebView.Source>
+            </WebView>  
+            <Grid Grid.Row="2" Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>    
+                <views:CheckLabel FontSize="50" Margin="0, 10, 10, 10" IsChecked="{Binding IsTermsAccepted, Mode=TwoWay}" mvx:Bi.nd="IsEnabled IsTermsScrolled" />
+                <Label Grid.Column="1">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text=" I hereby confirm that the above statements* are true and&#160;accept&#160;the&#160;" />
+                            <Span Text="terms and conditions" Style="{StaticResource hyperLink}" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TermsCommand}" NumberOfTapsRequired="1" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button x:Name="NextButton" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PrimaryButtonLarge}" Text="NEXT" mvx:Bi.nd="IsEnabled IsNextEnabled" Command="{Binding NextCommand}" />
+            </Grid>
+            <BoxView Grid.Row="2" BackgroundColor="White" Opacity="0.5" IsVisible="{Binding IsTermsScrolled, Converter={StaticResource InverseBoolean}}"  />
+        </Grid>                                                        
+    </ContentPage.Content>
+</local:BaseContentPage>
+    

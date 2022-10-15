@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Nacelle.KMA.UI.Resources.Converters"
+                    xmlns:local="clr-namespace:Nacelle.KMA.UI.Converters">
+    
+    <local:TripCardIsExpandedPrimaryColorValueConverter x:Key="TripCardIsExpandedPrimaryColor" />
+    <local:TripCardIsExpandedSecondaryColorValueConverter x:Key="TripCardIsExpandedSecondaryColor" />
+    
+    <local:InverseBooleanValueConverter x:Key="InverseBoolean" />
+    <local:IsNullOrEmptyStringValueConverter x:Key="IsNullOrEmptyString" />
+    <local:NotNullOrEmptyStringValueConverter x:Key="NotNullOrEmptyString" />
+    <local:HasStringValueConverter x:Key="HasString" />
+    <local:StringFormatValueConverter x:Key="StringFormat" />
+    <local:StringYearValueConverter x:Key="StringYear" />
+    <local:WeatherImgToSvgResourceValueConverter x:Key="WeatherImgToSvg" />
+    <local:BoolToIntValueConverter x:Key="BoolToInt" />
+    <local:HasItemsValueConverter x:Key="HasItems" />
+    <local:InverseHasItemsValueConverter x:Key="InverseHasItems" />
+    <local:InverseHasStringValueConverter x:Key="InverseHasString" />
+    <local:StringToUpperCaseValueConverter x:Key="StringToUpperCase" />
+    <local:ColorToStringValueConverter x:Key="ColorToString" />
+    <local:ObjectToBoolValueConverter x:Key="ObjectToBool" />
+    <local:HasBookingItemsToFindBookingDescriptionValueConverter x:Key="HasBookingItemsToFindBookingDescription"/>
+</ResourceDictionary>
+ 

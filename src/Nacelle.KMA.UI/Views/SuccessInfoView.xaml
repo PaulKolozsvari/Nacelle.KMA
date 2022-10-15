@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+    x:Class="Nacelle.KMA.UI.Views.SuccessInfoView">
+    <Frame Style="{StaticResource BoxedSuccess}" Margin="0,5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition />                
+            </Grid.ColumnDefinitions>           
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" FontFamily="{StaticResource GlyphFontFamily}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Text="{x:Static constants:IconFont.OkCircle}" 
+                   FontSize="28" 
+                   TextColor="{StaticResource SuccessDark}"/>
+            
+            <Label Grid.Row="0" Grid.Column="1" x:Name="primaryLabel"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="0"
+                   Style="{StaticResource MsgHeadingSuccess}"/>
+            
+            <Label Grid.Row="1" Grid.Column="1"  x:Name="secondaryLabel"
+                   Style="{StaticResource MessageCopy}" 
+                   Margin="0"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   IsVisible="False" />
+        </Grid>
+    </Frame>
+        
+</ContentView>
+
+
+<!--{Binding MyVM.SecondaryText, Converter={StaticResource NotNullOrEmptyString}}-->

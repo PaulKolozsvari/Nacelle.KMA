@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage
+    x:TypeArguments="viewModels:UpdateTravellerDetailsViewModel"
+    x:Class="Nacelle.KMA.UI.Pages.UpdateTravellerDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:enums="clr-namespace:Nacelle.KMA.Core.Models.Enums;assembly=Nacelle.KMA.Core"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:converters="clr-namespace:Nacelle.KMA.UI.Converters"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Check-In"
+    Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ValidationErrorTextValueConverter x:Key="ValidationErrorText" />
+            <converters:ValidationErrorColorValueConverter x:Key="ValidationError" />
+            <converters:IntToStringValueConverter x:Key="IntToString" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Cancel"
+            Command="{Binding CancelCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ProgressBar
+                Progress="0.6"
+                ProgressColor="{StaticResource PrimaryBlue}" />
+            <StackLayout Spacing="0"
+                BindableLayout.ItemsSource="{Binding BookingItems}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <local:BookingCheckInHeaderView />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            <StackLayout Margin="20,20,20,0">
+                <Label
+                    Text="Update traveller details"
+                    Style="{StaticResource Heading3}" />
+            </StackLayout>
+            <ScrollView>
+                <StackLayout Style="{StaticResource Container}"
+                    x:Name="parentControl"
+                    BindableLayout.ItemsSource="{Binding TravellerItems}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1" />
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+                                    <BoxView
+                                        Color="{StaticResource PrimaryGrey}" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Text="{Binding Name}"
+                                        VerticalTextAlignment="Center" 
+                                        Style="{StaticResource Heading5}" />
+                                    <views:InfoView
+                                        Grid.Row="2"
+                                        IsVisible="{Binding HasUpdatedWeightCategory}"
+                                        InfoMessage="Traveller information already completed" />
+                                    <views:ButtonSelector
+                                        Grid.Row="2"
+                                        SelectedIndex="{Binding SelectedWeightCategoryIndex}"
+                                        IsVisible="{Binding HasUpdatedWeightCategory, Converter={StaticResource InverseBoolean}}">
+                                        <views:ButtonSelector.ItemsSource>
+                                            <x:Array
+                                                Type="{x:Type x:String}">
+                                                <x:String>Adult male</x:String>
+                                                <x:String>Adult female</x:String>
+                                                <x:String>Child</x:String>
+                                            </x:Array>
+                                        </views:ButtonSelector.ItemsSource>
+                                    </views:ButtonSelector>
+                                </Grid>
+                                <StackLayout 
+                                    IsVisible="{Binding RequiresEmergencyContact}">
+                                    <Label
+                                        Text="Emergency contact details:"
+                                        HorizontalTextAlignment="Start" />
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <Entry
+                                        Style="{StaticResource PrimaryEntry}"
+                                        Placeholder="Name"
+                                        Text="{Binding EmergencyContact.Name}"
+                                        PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=EmergencyContact.Name}" />
+                                    </Frame>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <StackLayout>
+                                            <Entry
+                                            Style="{StaticResource PrimaryEntry}"
+                                            Placeholder="Country"
+                                            IsEnabled="false"
+                                            PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=EmergencyContact.Nationality}"
+                                            Text="{Binding EmergencyContact.Country}" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                Tapped="EmergencyContactCountrySelectorTapped"
+                                                NumberOfTapsRequired="1"
+                                                CommandParameter="{Binding EmergencyContact}" />
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+                                    <StackLayout
+                                        Margin="0,5"
+                                        Orientation="Horizontal">
+                                        <Frame Style="{StaticResource EntryFrame}"
+                                            WidthRequest="80" HorizontalOptions="Start">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                Placeholder="Code"
+                                                IsEnabled="false"
+                                                WidthRequest="80"
+                                                Text="{Binding EmergencyContact.DialingCode}"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="EmergencyContactCountrySelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding EmergencyContact}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <Entry
+                                            Style="{StaticResource PrimaryEntry}"
+                                            Text="{Binding EmergencyContact.ContactNumber}"
+                                            Placeholder="Contact number"
+                                            PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=EmergencyContact.ContactNumber}"
+                                            Keyboard="Numeric" />
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout 
+                                    Margin="0,0,0,5"
+                                    IsVisible="{Binding RequiresPassport}">
+                                    <Label
+                                        Text="Details as they appear on passport:"
+                                        HorizontalTextAlignment="Start"
+                                        Style="{StaticResource Heading6}" />
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <Entry
+                                        Style="{StaticResource PrimaryEntry}"
+                                        Text="{Binding PassportDetails.FirstName}" 
+                                        Placeholder="First name"
+                                        PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=PassportDetails.FirstName}" />
+                                    </Frame>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <Entry
+                                        Style="{StaticResource PrimaryEntry}"
+                                        Placeholder="Middle name (optional)"
+                                        Text="{Binding PassportDetails.MiddleName}" />
+                                    </Frame>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <Entry
+                                        Style="{StaticResource PrimaryEntry}"
+                                        Text="{Binding PassportDetails.LastName}"
+                                        Placeholder="Last name"
+                                        PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=PassportDetails.LastName}" />
+                                    </Frame>
+                                    <Label
+                                        Text="Gender:"
+                                        HorizontalTextAlignment="Start"
+                                        Style="{StaticResource Heading6}" />
+                                    <views:ButtonSelector
+                                        Margin="0,5"
+                                        HeightRequest="50"
+                                        SelectedIndex="{Binding PassportDetails.SelectedPassportGenderIndex}">
+                                        <views:ButtonSelector.ItemsSource>
+                                            <x:Array
+                                                Type="{x:Type x:String}">
+                                                <x:String>Male</x:String>
+                                                <x:String>Female</x:String>
+                                            </x:Array>
+                                        </views:ButtonSelector.ItemsSource>
+                                    </views:ButtonSelector>
+                                    <Label
+                                        Text="Date of birth:"
+                                        HorizontalTextAlignment="Start"
+                                        Style="{StaticResource Heading6}" />
+                                    <StackLayout
+                                        Margin="0,0,0,5"
+                                        Orientation="Horizontal"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                IsEnabled="false"
+                                                Placeholder="Day"
+                                                Text="{Binding PassportDetails.BirthDay, Converter={StaticResource IntToString}}"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportBirthDayNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                IsEnabled="false"
+                                                Placeholder="Month"
+                                                Text="{Binding PassportDetails.BirthMonth, Converter={StaticResource IntToString}}"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportBirthMonthNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                            Style="{StaticResource PrimaryEntry}"
+                                            IsEnabled="false"
+                                            Placeholder="Year"
+                                            Text="{Binding PassportDetails.BirthYear, Converter={StaticResource IntToString}}"
+                                            HorizontalOptions="FillAndExpand"
+                                            Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportBirthYearNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <StackLayout>
+                                            <Entry
+                                            Style="{StaticResource PrimaryEntry}"
+                                            IsEnabled="false"
+                                            Placeholder="Nationality"
+                                            Text="{Binding PassportDetails.Nationality}" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                Tapped="PassportNationalityCountrySelectorTapped"
+                                                NumberOfTapsRequired="1"
+                                                CommandParameter="{Binding PassportDetails}" />
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <Entry
+                                        Style="{StaticResource PrimaryEntry}"
+                                        Text="{Binding PassportDetails.PassportNumber}"
+                                        Placeholder="Passport number"
+                                        Keyboard="Numeric"
+                                        PlaceholderColor="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationError}, ConverterParameter=PassportDetails.PassportNumber}" />
+                                    </Frame>
+                                    <Frame Style="{StaticResource EntryFrame}">
+                                        <StackLayout>
+                                            <Entry
+                                            Style="{StaticResource PrimaryEntry}"
+                                            IsEnabled="false"
+                                            Placeholder="Issuing country"
+                                            Text="{Binding PassportDetails.IssuingCountry}" />
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                Tapped="PassportIssuingCountrySelectorTapped"
+                                                NumberOfTapsRequired="1"
+                                                CommandParameter="{Binding PassportDetails}" />
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Label
+                                        Text="Expiration date:"
+                                        HorizontalTextAlignment="Start"
+                                        Style="{StaticResource Heading6}" />
+                                    <StackLayout
+                                        Margin="0,0,0,5"
+                                        Orientation="Horizontal"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                IsEnabled="false"
+                                                Placeholder="Day"
+                                                Text="{Binding PassportDetails.ExpirationDay, Converter={StaticResource IntToString}}"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportExpiryDayNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                IsEnabled="false"
+                                                Placeholder="Month"
+                                                Text="{Binding PassportDetails.ExpirationMonth, Converter={StaticResource IntToString}}"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportExpiryMonthNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </Frame>
+                                        <Frame Style="{StaticResource EntryFrame}">
+                                            <StackLayout>
+                                                <Entry
+                                                Style="{StaticResource PrimaryEntry}"
+                                                IsEnabled="false"
+                                                Placeholder="Year"
+                                                Text="{Binding PassportDetails.ExpirationYear, Converter={StaticResource IntToString}}"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    Tapped="PassportExpiryYearNumberSelectorTapped"
+                                                    NumberOfTapsRequired="1"
+                                                    CommandParameter="{Binding PassportDetails}" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>                                            
+                                        </Frame>
+                                    </StackLayout>
+                                    <Label
+                                        TextColor="Red"
+                                        Text="{Binding Path=BindingContext.Errors, Source={x:Reference parentControl}, Converter={StaticResource ValidationErrorText}, ConverterParameter=PassportDetails.ExpirationDate}"
+                                        HorizontalTextAlignment="Start" />
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Grid VerticalOptions="EndAndExpand" Style="{StaticResource Container}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <BoxView Grid.Row="0" BackgroundColor="{StaticResource PrimaryWhite}" />
+                <Button
+                    Grid.Row="0"
+                    x:Name="NextButton"
+                    Style="{StaticResource PrimaryButtonLarge}"
+                    Text="NEXT"
+                    mvx:Bi.nd="IsEnabled IsNextEnabled"
+                    Command="{Binding NextCommand}" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</local:BaseContentPage>

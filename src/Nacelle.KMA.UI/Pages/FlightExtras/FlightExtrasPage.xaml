@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:FlightExtrasViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.FlightExtrasPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:effects="clr-namepace:Nacelle.KMA.UI.Effects"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    NavigationPage.HasNavigationBar="false"
+    ios:Page.UseSafeArea="true"
+    Visual="Material">
+    <StackLayout Style="{StaticResource Container}">
+        <views:CustomNavigationBar x:Name="NavigationBar" Title="Add flight extras" IsBackButtonVisible="true" />
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Add flight extras" Style="{StaticResource Heading1}"/> 
+                <Label Style="{StaticResource Paragraph}" Text="Add something extra to make your flight even better" />
+                <Button Style="{StaticResource PrimaryButtonLarge}" Text="PURCHASE EXTRAS ONLINE" Command="{Binding PurchaseExtrasCommand}" />
+                <Button Style="{StaticResource TransparentButtonLarge}" Text="CALL 0861 KULULA (585852)" Command="{Binding CallCommand}" />
+                <Label Style="{StaticResource ContentCopy}" Text="Our available extras:" Margin="0,20,0,0"/>
+                <StackLayout BindableLayout.ItemsSource="{Binding FlightExtraItems}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                                <Grid Margin="0, 0, 0, 20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ffimageloadingsvg:SvgCachedImage Source="{Binding Icon}" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="60" />
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="{Binding Title}" Style="{StaticResource Heading3}" />
+                                        <Label Text="{Binding Description}" Style="{StaticResource Paragraph}" />
+                                    </StackLayout>
+                                </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView.Behaviors>
+                <behaviors:ScrollingTitleBehavior CustomNavigationBar="{Binding Source={x:Reference NavigationBar}}" />
+            </ScrollView.Behaviors>
+       </ScrollView>
+    </StackLayout>
+</local:BaseContentPage >

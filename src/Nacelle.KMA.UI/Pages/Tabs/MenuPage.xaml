@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:MenuViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:templates="clr-namespace:Nacelle.KMA.UI.Templates"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    
+    Title="Menu" Icon="TabIconMenu">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+        
+            <DataTemplate x:Key="MenuTemplate">
+                <Grid Margin="0, 5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ffimageloadingsvg:SvgCachedImage Source="{Binding Icon}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="25" HeightRequest="25" />
+                    <Label Grid.Column="1" Text="{Binding Title}" Style="{StaticResource Heading5}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MenuCommand}" NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </DataTemplate>
+            
+            <DataTemplate x:Key="SeparatorTemplate">
+                <BoxView Margin="0, 5" Color="{StaticResource PrimaryGrey}" HeightRequest="0.5" HorizontalOptions="FillAndExpand" />
+            </DataTemplate>
+            
+            <templates:MenuItemDataTemplateSelector x:Key="menuItemDataTemplateSelector"
+                MenuItemTemplate="{StaticResource MenuTemplate}"
+                SeperatorTemplate="{StaticResource SeparatorTemplate}" />
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView Style="{StaticResource Container}">
+        <StackLayout>
+            <ffimageloadingsvg:SvgCachedImage Margin="0, 0, 80, 20" HeightRequest="35" HorizontalOptions="Start" Source="resource://Nacelle.KMA.UI.Resources.Images.kma-logo-color.svg"/>
+            <StackLayout BindableLayout.ItemsSource="{Binding MenuItems}" Spacing="15" BindableLayout.ItemTemplateSelector="{StaticResource menuItemDataTemplateSelector}" />
+        </StackLayout>            
+    </ScrollView>
+</local:BaseContentPage>        

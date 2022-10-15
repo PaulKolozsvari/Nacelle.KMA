@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:ContactUsViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.ContactUsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    NavigationPage.HasNavigationBar="false"
+    Title="Contact Us"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Style="{StaticResource Container}">
+            <views:BackNavButton />
+            <Label Text="Contact Us"
+               Style="{StaticResource Heading1}" />
+            <Label Style="{StaticResource Paragraph}" Text="Call our kulula.com Contact Centre for any queries" />
+            <Button Style="{StaticResource PrimaryButtonLarge}" Text="{Binding TelephoneNumber}" Command="{Binding CallCommand}" />
+            <Label Style="{StaticResource Paragraph}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Or email us on " />
+                        <Span Style="{StaticResource hyperLink}" Text="{Binding EmailAddress}">
+                            <Span.GestureRecognizers>
+                               <TapGestureRecognizer Command="{Binding EmailCommand, Mode=OneWay}" NumberOfTapsRequired="1"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <BoxView HeightRequest="0.5" Color="Gray" Margin="0, 20" />
+            <Label Style="{StaticResource Heading4}" Margin="0" Text="Operating hours" />
+            
+            <Label Style="{StaticResource Heading5}" Text="Flight bookings:" />
+            <Label Style="{StaticResource Paragraph}" Text="Monday to Sunday 07h00 - 19h00" />
+
+            <Label Style="{StaticResource Heading5}" Text="Car hire, hotel or combo (flight+) bookings:" LineBreakMode="WordWrap" />
+            <Label Style="{StaticResource Paragraph}" Text="Combine and save up to 20%&#x0a;Monday to Sunday 07h00 - 19h00" />
+
+            <Label Style="{StaticResource Heading5}" Text="Holiday package bookings:" />
+            <Label Style="{StaticResource Paragraph}" Text="Monday to Fridays: 08h30 -17h00&#x0a;Saturdays and public holidays: closed." />
+         </StackLayout>
+    </ScrollView>
+</local:BaseContentPage>

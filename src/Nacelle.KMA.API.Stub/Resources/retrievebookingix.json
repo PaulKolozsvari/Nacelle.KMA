@@ -1,0 +1,51 @@
+﻿{
+  "bookings": {
+    "count": 1,
+    "booking": [
+      {
+        "rloc": "MWUSVZ",
+        "bookingName": [
+          {
+            "firstName": "ROGE",
+            "lastName": "WEISS",
+            "passengerType": 1,
+            "bookingNameItem": [
+              {
+                "aircraftType": "738",
+                "arrivalDateTime": "2019-06-21T11:10:00",
+                "commercialCarrier": "MN",
+                "commercialFlightNumber": 133,
+                "dateItemTicketed": "2019-04-06T11:06:04",
+                "departureDate": "2019-06-21T09:00:00",
+                "destination": "CPT",
+                "destinationCity": "CPT",
+                "destinationCountry": "ZA",
+                "operatingCarrier": "MN",
+                "operatingFlightNumber": 133,
+                "origin": "JNB",
+                "originCity": "JNB",
+                "originCountry": "ZA"
+              },
+              {
+                "aircraftType": "738",
+                "arrivalDateTime": "2019-06-22T08:30:00",
+                "commercialCarrier": "MN",
+                "commercialFlightNumber": 100,
+                "dateItemTicketed": "2019-04-06T11:06:04",
+                "departureDate": "2019-06-22T06:30:00",
+                "destination": "JNB",
+                "destinationCity": "JNB",
+                "destinationCountry": "ZA",
+                "operatingCarrier": "MN",
+                "operatingFlightNumber": 100,
+                "origin": "CPT",
+                "originCity": "CPT",
+                "originCountry": "ZA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

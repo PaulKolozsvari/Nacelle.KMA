@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:ManageBookingViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.ManageBookingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    NavigationPage.HasNavigationBar="false"
+    Title="Manage Booking"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Style="{StaticResource Container}">
+            <views:BackNavButton />
+            <Label Text="Manage Booking"
+               Style="{StaticResource Heading1}" />
+            <Label Style="{StaticResource Heading5}" Text="Flight bookings" />
+            <Label Style="{StaticResource Paragraph}" Text="It is easy to change your flight online as long as it is not departing within 24 hours. For flights departing within 24 hours or that have been changed previously please call the Contact Centre." />
+            <Label Style="{StaticResource Paragraph}" Text="Please note that no name changes are allowed only name corrections. For more information on changing your booking please visit our website." />
+            <Label Style="{StaticResource Heading5}" Text="Other bookings" />
+            <Label Style="{StaticResource Paragraph}" Text="Changes to car hire, hotel, combo &amp; holiday package bookings can unfortunately not be made online, please call our Contact Centre for assistance." />
+            <Button Style="{StaticResource SecondaryButtonLarge}" Text="MANAGE BOOKING ONLINE" Command="{Binding ManageBookingOnlineCommand}" />
+            <Button Style="{StaticResource TransparentButtonLarge}" Text="{Binding TelephoneNumber}" Command="{Binding CallCommand}" />
+    </StackLayout>
+   
+    </ScrollView>
+</local:BaseContentPage>

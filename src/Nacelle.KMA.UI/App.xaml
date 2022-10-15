@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="Nacelle.KMA.UI.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="clr-namespace:MvvmCross.Forms;assembly=MvvmCross.Forms"
+    xmlns:resources="clr-namespace:Nacelle.KMA.UI.Resources">
+    <Application.Resources>
+
+        <!--  Application resource dictionary  -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:Styles />
+                <resources:Converters />
+            </ResourceDictionary.MergedDictionaries>
+            
+            
+            <OnPlatform x:Key="GlyphFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="glyphfont" />
+                <On Platform="Android" Value="glyphfont.ttf#glyphfont" />
+            </OnPlatform>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

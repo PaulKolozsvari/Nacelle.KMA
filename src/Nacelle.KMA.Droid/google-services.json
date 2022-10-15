@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "934999391965",
+    "firebase_url": "https://kulula-travel-app.firebaseio.com",
+    "project_id": "kulula-travel-app",
+    "storage_bucket": "kulula-travel-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934999391965:android:5a189011b28f14fc",
+        "android_client_info": {
+          "package_name": "com.comair.kmacert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934999391965-gaqbmkl8mb7sshi7s6r5db3hgdhbi7g5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8yRRBpGl0Du398z8x2-PUetCkpvclscM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934999391965-gaqbmkl8mb7sshi7s6r5db3hgdhbi7g5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934999391965-32cb29202t6cjp2bev1ej1rs1oj5h9ec.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.comair.kma-cert",
+                "app_store_id": "1452834379"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,356 @@
+{
+    "reservation": {
+        "id": "res1",
+        "itinerary": {
+            "itineraryPart": [
+                {
+                    "id": "ip1",
+                    "segment": [
+                        {
+                            "baggageCheckInRules": {
+                                "homePrintedBagTagRestricted": {
+                                    "message": "Home Printed Bag Tag is not allowed for given airline.",
+                                    "type": "RESTRICTED"
+                                },
+                                "lateCheckIn": false,
+                                "petAllowed": true
+                            },
+                            "fareInfo": {
+                                "bookingClass": "D",
+                                "brand": "RS"
+                            },
+                            "flightDetail": [
+                                {
+                                    "airline": "MN",
+                                    "arrivalAirport": "JNB",
+                                    "arrivalCountry": "ZA",
+                                    "arrivalTime": "2019-05-31T12:00:00+02:00",
+                                    "boardingTime": "2019-05-31T09:50:00+02:00",
+                                    "commuter": false,
+                                    "departureAirport": "GRJ",
+                                    "departureCountry": "ZA",
+                                    "departureFlightScheduleStatus": "ON_TIME",
+                                    "departureGate": "5",
+                                    "departureTime": "2019-05-31T10:20:00+02:00",
+                                    "equipment": "738",
+                                    "estimatedArrivalTime": "2019-05-31T12:00:00+02:00",
+                                    "estimatedDepartureTime": "2019-05-31T10:20:00+02:00",
+                                    "flightNumber": "910",
+                                    "id": "f1",
+                                    "operatingAirline": "MN",
+                                    "operatingAirlineName": "COMAIR LTD.",
+                                    "operatingFlightNumber": "910"
+                                }
+                            ],
+                            "id": "s1",
+                            "number": "3",
+                            "status": {
+                                "code": "HK",
+                                "value": "CONFIRMED"
+                            }
+                        },
+                        {
+                            "eligibilities": {
+                                "eligibility": [
+                                    {
+                                        "notEligible": true,
+                                        "reason": [
+                                            {
+                                                "category": "SEGMENT_NOT_AVAILABLE_FOR_SELF_CHECK_IN",
+                                                "message": "Segment not valid for through checkin"
+                                            }
+                                        ],
+                                        "type": "CHECK_IN"
+                                    }
+                                ]
+                            },
+                            "fareInfo": {
+                                "bookingClass": "A",
+                                "brand": "SF",
+                                "cabinClass": "FIRST"
+                            },
+                            "flightDetail": [
+                                {
+                                    "airline": "MN",
+                                    "arrivalAirport": "GRJ",
+                                    "arrivalCountry": "ZA",
+                                    "arrivalTime": "2019-06-01T13:35:00+02:00",
+                                    "boardingTime": "2019-06-01T11:10:00+02:00",
+                                    "commuter": false,
+                                    "departureAirport": "JNB",
+                                    "departureCountry": "ZA",
+                                    "departureFlightScheduleStatus": "ON_TIME",
+                                    "departureGate": "GATE",
+                                    "departureTerminal": "B",
+                                    "departureTime": "2019-06-01T11:40:00+02:00",
+                                    "equipment": "738",
+                                    "estimatedArrivalTime": "2019-06-01T13:35:00+02:00",
+                                    "estimatedDepartureTime": "2019-06-01T11:40:00+02:00",
+                                    "flightNumber": "905",
+                                    "id": "f2",
+                                    "operatingAirline": "MN",
+                                    "operatingAirlineName": "COMAIR LTD.",
+                                    "operatingFlightNumber": "905"
+                                }
+                            ],
+                            "id": "s2",
+                            "number": "5",
+                            "status": {
+                                "code": "HK",
+                                "value": "CONFIRMED"
+                            }
+                        }
+                    ],
+                    "type": "OUTBOUND"
+                }
+            ]
+        },
+        "passengers": {
+            "passenger": [
+                {
+                    "contactDetails": {},
+                    "eligibilities": {
+                        "eligibility": [
+                            {
+                                "notEligible": false,
+                                "reason": [
+                                    {
+                                        "category": "ALLOWED_BAG_TAG_ISSUANCE_PRIOR_TO_PAYMENT",
+                                        "message": "Passenger is eligible to have bag tag issued prior to payment"
+                                    }
+                                ],
+                                "type": "BAGGAGE_CHECK_IN"
+                            }
+                        ]
+                    },
+                    "fiscalCode": "ADT",
+                    "id": "p01.01",
+                    "nameNumber": "01.01",
+                    "passengerSegments": {
+                        "passengerSegment": [
+                            {
+                                "id": "p01.01.s1",
+                                "passengerFlight": [
+                                    {
+                                        "checkedIn": false,
+                                        "flightRefs": [
+                                            "f1"
+                                        ],
+                                        "id": "p01.01.s1.f1",
+                                        "seat": {
+                                            "value": "16A"
+                                        }
+                                    }
+                                ],
+                                "segmentRef": "s1"
+                            },
+                            {
+                                "id": "p01.01.s2",
+                                "passengerFlight": [
+                                    {
+                                        "checkedIn": false,
+                                        "flightRefs": [
+                                            "f2"
+                                        ],
+                                        "id": "p01.01.s2.f2"
+                                    }
+                                ],
+                                "segmentRef": "s2"
+                            }
+                        ]
+                    },
+                    "personName": {
+                        "first": "MOM",
+                        "last": "FLYER",
+                        "raw": "FLYER/MOM"
+                    },
+                    "syntheticIdentifier": "ECDE/xaRspyV0uF/DtTNT8PltukEUvnPAn45Dv7Ig9xc2gQY5zvsSwM4DNvW91YCtwdvsT/rsTRAubCtS6TtMw==",
+                    "ticket": [
+                        {
+                            "issued": true,
+                            "ticketCoupon": [
+                                {
+                                    "baggageDisclosure": {
+                                        "checkedInBaggage": {
+                                            "baggageAllowanceDefinition": [
+                                                {
+                                                    "allowanceSource": "TICKET",
+                                                    "quantity": 1
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "couponNumber": "1",
+                                    "fareBasisCode": "DRS",
+                                    "segmentRef": "s1",
+                                    "status": "OK"
+                                },
+                                {
+                                    "baggageDisclosure": {
+                                        "checkedInBaggage": {
+                                            "baggageAllowanceDefinition": [
+                                                {
+                                                    "allowanceSource": "TICKET",
+                                                    "quantity": 1
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "couponNumber": "2",
+                                    "fareBasisCode": "ASF",
+                                    "segmentRef": "s2",
+                                    "status": "OK"
+                                }
+                            ],
+                            "ticketNumber": {
+                                "number": "1612116639744"
+                            }
+                        }
+                    ],
+                    "transportationSecurity": {
+                        "preScreeningData": {
+                            "dateOfBirth": "2006-02-02",
+                            "gender": "MALE",
+                            "personName": {
+                                "first": "MOM",
+                                "last": "FLYER"
+                            }
+                        }
+                    },
+                    "type": {
+                        "value": "ADULT"
+                    },
+                    "weightCategory": "ADULT_FEMALE"
+                },
+                {
+                    "contactDetails": {},
+                    "eligibilities": {
+                        "eligibility": [
+                            {
+                                "notEligible": false,
+                                "reason": [
+                                    {
+                                        "category": "ALLOWED_BAG_TAG_ISSUANCE_PRIOR_TO_PAYMENT",
+                                        "message": "Passenger is eligible to have bag tag issued prior to payment"
+                                    }
+                                ],
+                                "type": "BAGGAGE_CHECK_IN"
+                            }
+                        ]
+                    },
+                    "fiscalCode": "ADT",
+                    "id": "p02.01",
+                    "nameNumber": "02.01",
+                    "passengerSegments": {
+                        "passengerSegment": [
+                            {
+                                "id": "p02.01.s1",
+                                "passengerFlight": [
+                                    {
+                                        "checkedIn": false,
+                                        "flightRefs": [
+                                            "f1"
+                                        ],
+                                        "id": "p02.01.s1.f1"
+                                    }
+                                ],
+                                "segmentRef": "s1"
+                            },
+                            {
+                                "id": "p02.01.s2",
+                                "passengerFlight": [
+                                    {
+                                        "checkedIn": false,
+                                        "flightRefs": [
+                                            "f2"
+                                        ],
+                                        "id": "p02.01.s2.f2"
+                                    }
+                                ],
+                                "segmentRef": "s2"
+                            }
+                        ]
+                    },
+                    "personName": {
+                        "first": "DAD",
+                        "last": "FLYER",
+                        "raw": "FLYER/DAD"
+                    },
+                    "syntheticIdentifier": "+MfIQZDRCCg4d2kTQ+Cr3mipPNbThNM26MoPY3qTPk1c2gQY5zvsSwM4DNvW91YCM5SP55SMSE5afkrJYSJlag==",
+                    "ticket": [
+                        {
+                            "issued": true,
+                            "ticketCoupon": [
+                                {
+                                    "baggageDisclosure": {
+                                        "checkedInBaggage": {
+                                            "baggageAllowanceDefinition": [
+                                                {
+                                                    "allowanceSource": "TICKET",
+                                                    "quantity": 1
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "couponNumber": "1",
+                                    "fareBasisCode": "DRS",
+                                    "segmentRef": "s1",
+                                    "status": "OK"
+                                },
+                                {
+                                    "baggageDisclosure": {
+                                        "checkedInBaggage": {
+                                            "baggageAllowanceDefinition": [
+                                                {
+                                                    "allowanceSource": "TICKET",
+                                                    "quantity": 1
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "couponNumber": "2",
+                                    "fareBasisCode": "ASF",
+                                    "segmentRef": "s2",
+                                    "status": "OK"
+                                }
+                            ],
+                            "ticketNumber": {
+                                "number": "1612116639745"
+                            }
+                        }
+                    ],
+                    "transportationSecurity": {
+                        "preScreeningData": {
+                            "dateOfBirth": "2006-02-02",
+                            "gender": "MALE",
+                            "personName": {
+                                "first": "DAD",
+                                "last": "FLYER"
+                            }
+                        }
+                    },
+                    "type": {
+                        "value": "ADULT"
+                    },
+                    "weightCategory": "ADULT_MALE"
+                }
+            ]
+        },
+        "recordLocator": "FWPGIC",
+        "version": "14249975543a4c78388bac280e849f3c07f1d24695e1f3f4"
+    },
+    "results": [
+        {
+            "status": [
+                {
+                    "type": "SUCCESS"
+                }
+            ],
+            "update": {
+                "context": "PASSENGER_FLIGHT_SEAT",
+                "operation": "ADD",
+                "value": "p01.01.s1.f1"
+            }
+        }
+    ]
+}

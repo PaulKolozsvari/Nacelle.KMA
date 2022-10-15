@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Nacelle.KMA.UI.Views.CheckInDateTimeCardView"
+             xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+             x:Name="this">
+    <StackLayout BackgroundColor="{StaticResource Blue5}" Padding="20,10">
+        <Label Text="{Binding Message, Source={x:Reference this}}" Style="{StaticResource TripCardHeading2W}" />
+        <Label Style="{StaticResource TripCardHeadingW}" HorizontalOptions="Start" Text="{Binding DateOrTime, Source={x:Reference this}}" />
+        <Label VerticalTextAlignment="Center" VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontFamily="{DynamicResource GlyphFontFamily}" Text="{x:Static constants:IconFont.Clock}" FontSize="20" TextColor="{StaticResource PrimaryWhite}" />
+                    <Span Text="&#160;&#160;" />
+                    <Span Text="{Binding CheckInTime, Source={x:Reference this}}" Style="{StaticResource TripCardHeading2W}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentView>

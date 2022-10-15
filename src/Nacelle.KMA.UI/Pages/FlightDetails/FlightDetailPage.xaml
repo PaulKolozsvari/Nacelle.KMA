@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:RefreshableContentPage 
+    x:TypeArguments="viewModels:FlightDetailViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.FlightDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:converters="clr-namespace:Nacelle.KMA.UI.Converters"
+    xmlns:pull="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+    Title="{Binding Title}"
+    Visual="Material">
+    <ContentPage.Resources>
+        <converters:TripTypeToIsVisibleBoolValueConverter x:Key="TripTypeToIsVisible" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="VerticalEllipse" Clicked="Handle_Clicked" />
+    </ContentPage.ToolbarItems>    
+    <ContentPage.Content>
+        <Grid>
+            <views:MaterialMenu x:Name="MaterialMenu" ButtonType="Text" CornerRadius="24" Margin="0, -20, 0, 0" HorizontalOptions="End" Choices="{Binding TripMenuItems}" MenuSelected="Handle_MenuSelected" />  
+            <pull:PullToRefreshLayout x:Name="PullToRefresh"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsBusy}"
+                  RefreshColor="{StaticResource PrimaryGreen}"> 
+                <ScrollView x:Name="ScrollView">
+                    <StackLayout Spacing="0">
+                        <views:FlightToAndFromHeaderCardView To="{Binding To}"
+                                                             From="{Binding From}"
+                                                             DateFrom="{Binding DateFrom}"
+                                                             DateTo="{Binding DateTo}" />
+                        <views:CheckInDateTimeCardView Message="{Binding CheckInMessage}" 
+                                                       DateOrTime="{Binding CheckInDateTime}"
+                                                       CheckInTime="{Binding FormattedCheckInTime}"
+                                                       IsVisible="{Binding CardsVisibility.IsCheckInDateTimeCardViewVisible}"/>
+                        <views:BoardingDateTimeCardView IsVisible="{Binding CardsVisibility.IsBoardingDateTimeCardViewVisibleVisible}"/>
+                        <views:FlightLeavesSoonDateTimeCardView IsVisible="{Binding CardsVisibility.IsFlightLeavesSoonDateTimeCardViewVisible}"/>
+                        <views:DelayedDateTimeCardView IsVisible="{Binding CardsVisibility.IsDelayedDateTimeCardViewVisible}"/>
+                        <views:CancelledDateTimeCardView IsVisible="{Binding CardsVisibility.IsCancelledDateTimeCardViewVisible}"/>
+                        <views:CheckInCardView IsVisible="{Binding CardsVisibility.IsCheckInCardViewVisible}"/>
+                        <views:PassengerSeatCardView IsVisible="{Binding CardsVisibility.IsPassengerSeatCardViewVisible}"/>
+                        <views:GateCardView IsVisible="{Binding CardsVisibility.IsGateCardViewVisible}"/>
+                        <StackLayout IsVisible="{Binding CardsVisibility.IsWeatherCardVisible}">
+                            <views:WeatherCardView Icon="{Binding Weather.Icon}"
+                                                   Synopsis="{Binding Weather.Synopsis}"
+                                                   City="{Binding Weather.City}"
+                                                   Temperature="{Binding Weather.Temperature}"
+                                                   IsVisible="{Binding CardsVisibility.IsWeatherCardVisible}"/>
+                            </StackLayout>
+                        <views:ShareFlightCardView /> 
+                        <StackLayout Padding="0, 5, 0, 5" BackgroundColor="{StaticResource Blue5}" x:Name="TripCardStack">
+                            <views:TripCardSummary Expanded="{Binding TripItem.IsSummaryMode, Converter={StaticResource InverseBoolean}}"
+                                                   Day="{Binding TripItem.Day}"
+                                                   Month="{Binding TripItem.Month}"
+                                                   Caption="{Binding TripItem.Caption}"
+                                                   BookingReference="{Binding TripItem.BookingReference}"
+                                                   TripMenuItems="{Binding TripMenuItems}"
+                                                   ToggleExpandedCommand="{Binding TripItem.ToggleSummaryModeCommand}"
+                                                   TripItemMenuCommand="{Binding Path=BindingContext.TripItemMenuCommand, Source={x:Reference TripCardStack}}"/>
+                              <StackLayout x:Name="TripsStackView" 
+                                             BindableLayout.ItemsSource="{Binding TripItem.FlightItems}" 
+                                             IsVisible="{Binding CardsVisibility.IsTripCardTripsVisible}"
+                                             Margin="20, 0">
+                                    <BindableLayout.ItemTemplate>
+                                         <DataTemplate> 
+                                            <views:TripCardDetail Caption="{Binding Caption}"
+                                                                  Number="{Binding Number}"
+                                                                  FlightDateTime="{Binding FlightDateTimeSpan}"
+                                                                  CheckInButtonIsVisible="{Binding CardsVisibility.IsTripCardCheckInButtonVisible}"
+                                                                  ViewBoardingPassButtonIsVisible="{Binding CardsVisibility.IsTripCardViewBoardingPassIsVisible}"
+                                                                  CheckInCommand="{Binding CheckInCommand}"
+                                                                  ViewBoardingPassCommand="{Binding ViewBoardingPassCommand}"
+                                                                  FlightDetailCommand="{Binding Path=BindingContext.FlightItemCommand, Source={x:Reference TripCardStack}}"/>
+                                         </DataTemplate>   
+                                     </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                        </StackLayout> 
+                    </StackLayout>
+                </ScrollView>
+            </pull:PullToRefreshLayout>
+        </Grid>
+    </ContentPage.Content>
+</local:RefreshableContentPage>

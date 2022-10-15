@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:RefreshableContentPage 
+    x:TypeArguments="viewModels:HomeViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:pull="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+    xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    Visual="Material"
+    BackgroundColor="##1f4b8e"
+    Title="Home"
+    Icon="TabIconHome">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <ffimageloading:CachedImage
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Aspect="AspectFill"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="3"
+                DownsampleToViewSize="true"
+                Source="Background" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ffimageloadingsvg:SvgCachedImage
+                Grid.ColumnSpan="3"
+                VerticalOptions="End"                
+                HeightRequest="35"
+                Source="resource://Nacelle.KMA.UI.Resources.Images.kma-logo.svg" />
+            <Label
+                x:Name="RefreshLabel"
+                Grid.Column="2"
+                Margin="0, 20, 5, 0"
+                FontFamily="{StaticResource GlyphFontFamily}"
+                Text="{x:Static constants:IconFont.ArrowsCw}"
+                FontSize="28"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding RefreshCommand}"
+                        NumberOfTapsRequired="1"
+                        Tapped="RefreshLabel_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <pull:PullToRefreshLayout
+                x:Name="PullToRefresh"
+                Grid.Row="1"
+                Grid.ColumnSpan="3"
+                IsPullToRefreshEnabled="{Binding BookingManager.BookingItems, Converter={StaticResource HasItems}, Mode=OneWay}"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsRefreshing="{Binding IsBusy}"
+                RefreshColor="{StaticResource PrimaryGreen}">
+                <ScrollView>
+                    <StackLayout>
+                        <cards:CoverFlowView
+                            x:Name="bookingCards"
+                            PositionShiftValue="40"
+                            IsCyclical="false"
+                            IsVisible="{Binding BookingManager.BookingItems, Converter={StaticResource HasItems}}"
+                            ItemsSource="{Binding BookingManager.BookingItems}">
+                            <cards:CoverFlowView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame 
+                                        Padding="0"
+                                        Margin="25, 25, 25, 0"
+                                        VerticalOptions="Start"
+                                        CornerRadius="5"
+                                        BackgroundColor="Transparent">
+                                        <StackLayout Spacing="0">
+                                            <Frame Style="{StaticResource Boxed}" Margin="0" Padding="0">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="80" />
+                                                        <RowDefinition Height="100" />
+                                                        <RowDefinition Height="Auto" />
+                                                    </Grid.RowDefinitions>
+                                                    <Image
+                                                Grid.ColumnSpan="3"
+                                                Source="{Binding To, Converter={StaticResource StringFormat}, ConverterParameter='CityHeader{0}'}"
+                                                Aspect="AspectFill" />
+                                                    <Label
+                                                Grid.Column="0"
+                                                Style="{StaticResource TripCardHeadingW}"
+                                                Text="{Binding From}" />
+                                                    <ffimageloadingsvg:SvgCachedImage
+                                                Grid.Column="1"
+                                                Source="resource://Nacelle.KMA.UI.Resources.Images.icon-plane-white-large.svg"
+                                                Margin="0, 20" />
+                                                    <Label
+                                                Grid.Column="2"
+                                                Style="{StaticResource TripCardHeadingW}"
+                                                Text="{Binding To}" />
+                                                <StackLayout
+                                                    Grid.Row="1"
+                                                    Grid.ColumnSpan="3"
+                                                    Margin="10">
+                                                    <Label
+                                                        Text="{Binding Caption}"
+                                                        Style="{StaticResource TripCardHeading2}" />
+                                                    <Label 
+                                                        Text="{Binding Number}"
+                                                        Style="{StaticResource TripCardContent}" />
+                                                    <Label
+                                                        Text="{Binding FlightDateTimeSpan}"
+                                                        Style="{StaticResource TripCardContent}" /> 
+                                                </StackLayout>
+                                                <ffimageloadingsvg:SvgCachedImage
+                                                Grid.Column="2"
+                                                Grid.Row="1"
+                                                HorizontalOptions="End"
+                                                WidthRequest="24"
+                                                Source="resource://Nacelle.KMA.UI.Resources.Images.arrowhead-right-gray.svg" />
+                                                    <Grid.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                    Command="{Binding FlightDetailCommand}"
+                                                    NumberOfTapsRequired="1" />
+                                                    </Grid.GestureRecognizers>
+                                                </Grid>
+                                            </Frame>
+                                            <skiaforms:SKCanvasView BackgroundColor="{StaticResource PrimaryWhite}"
+                                                PaintSurface="OnCanvasViewPaintSurface" 
+                                                HorizontalOptions="FillAndExpand" 
+                                                IsVisible="{Binding IsCheckInOrBoardingPassVisible}"
+                                                Margin="5, 0"
+                                                HeightRequest="0.7"  />
+                                            <Frame Style="{StaticResource TripCardButton}" IsVisible="{Binding IsCheckInVisible}">
+                                                <Button
+                                                    Style="{StaticResource PrimaryButtonMedium}"
+                                                    Image="CheckInWhite"
+                                                    Text="CHECK-IN NOW"
+                                                    Command="{Binding Path=BindingContext.CheckInCommand, Source={x:Reference bookingCards}}"
+                                                    CommandParameter="{Binding .}" />
+                                            </Frame>
+                                            <Frame Style="{StaticResource TripCardButton}" IsVisible="{Binding IsViewBoardingPassVisible}">
+                                                <Button
+                                                Style="{StaticResource PrimaryButtonMedium}"
+                                                Image="QRCodeWhite"
+                                                Text="VIEW BOARDING PASS"
+                                                Command="{Binding Path=BindingContext.ViewBoardingPassCommand, Source={x:Reference bookingCards}}"
+                                                CommandParameter="{Binding .}" />
+                                            </Frame>
+                                        </StackLayout>
+                                        <Frame.Behaviors>
+                                            <behaviors:CarouselItemAnimateBehavior ScaleDownTo="0.85" />
+                                        </Frame.Behaviors>
+                                    </Frame>
+                                </DataTemplate>
+                            </cards:CoverFlowView.ItemTemplate>
+                        </cards:CoverFlowView>
+                        <Label
+                            IsVisible="{Binding BookingManager.BookingItems, Converter={StaticResource InverseHasItems}}"
+                            Text="How can we assist you with&#160;your&#160;flight?"
+                            Style="{StaticResource Heading2}"
+                            LineHeight="1.2"
+                            LineBreakMode="WordWrap"
+                            Margin="50, 10, 50, 15"
+                            HorizontalTextAlignment="Center"
+                            TextColor="{StaticResource PrimaryWhite}" />
+                        <Button
+                            Text="FIND MY BOOKING"
+                            Style="{StaticResource PrimaryButtonLarge}"
+                            Margin="50, 5"
+                            Command="{Binding FindBookingCommand}" />
+                        <Button
+                            Text="BOOK A FLIGHT"
+                            Style="{StaticResource SecondaryButtonLarge}"
+                            Margin="50, 5"
+                            Command="{Binding BookFlightCommand}" />
+                        <Frame Style="{StaticResource BoxedBordered}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180" />
+                                </Grid.ColumnDefinitions>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Style="{StaticResource MsgHeadingInfo}"
+                                                Text="FLIGHT EXTRAS  " />
+                                            <Span
+                                                FontFamily="{StaticResource GlyphFontFamily}"
+                                                Text="{x:Static constants:IconFont.RightOpen}"
+                                                FontSize="Medium"
+                                                TextColor="{StaticResource InfoDark}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label
+                                    Style="{StaticResource Heading5}"
+                                    LineHeight="1.2"
+                                    Text="Add something extra to make your flight even better"
+                                    VerticalOptions="Fill"
+                                    VerticalTextAlignment="Center"
+                                    Margin="0,40,0,0"/>
+                                <ffimageloadingsvg:SvgCachedImage
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"
+                                    Source="resource://Nacelle.KMA.UI.Resources.Images.seated-passenger.svg" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding FlightExtrasCommand}"
+                                        NumberOfTapsRequired="1" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </pull:PullToRefreshLayout>
+        </Grid>
+    </ContentPage.Content>
+</local:RefreshableContentPage >
+
+
+<!--"{Binding IsCheckInVisible}"-->

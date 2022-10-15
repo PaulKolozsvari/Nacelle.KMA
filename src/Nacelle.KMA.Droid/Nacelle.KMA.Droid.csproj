@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B80AD3A-E795-488F-A3A3-027D678A7843}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nacelle.KMA.Droid</RootNamespace>
+    <AssemblyName>Nacelle.KMA.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <BundleAssemblies>true</BundleAssemblies>
+    <AotAssemblies>true</AotAssemblies>
+    <EnableLLVM>true</EnableLLVM>
+    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Linker\LinkerPleaseInclude.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\AppActivity.cs" />
+    <Compile Include="Views\SplashActivity.cs" />
+    <Compile Include="Effects\NoShiftEffect.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Platform\PlatformPath.cs" />
+    <Compile Include="Platform\StatusBarStyleManager.cs" />
+    <Compile Include="Plugins\ScreenshotService.cs" />
+    <Compile Include="Effects\CapsEntryEffect.cs" />
+    <Compile Include="KmaFirebaseIIDService.cs" />
+    <Compile Include="KmaFirebaseMessagingService.cs" />
+    <Compile Include="Plugins\BarcodeService.cs" />
+    <Compile Include="Services\FirebaseAnalyticsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProguardConfiguration Include="proguard.cfg" />
+    <AndroidAsset Include="Assets\Flama-Semibold.otf" />
+    <AndroidAsset Include="Assets\OpenSans-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\drawable\vector_kma_logo_white.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabIconHome.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TabIconHome.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TabIconHome.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabIconTrips.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TabIconTrips.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TabIconTrips.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\TabIconTrips.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\TabIconHome.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\TabIonHome.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\TabIconTrips.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabIconCheckIn.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TabIconCheckIn.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TabIconCheckIn.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\TabIconCheckIn.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\TabIconCheckIn.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\TabIconMenu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\TabIconMenu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\TabIconMenu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\TabIconMenu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\TabIconMenu.png" />
+    <AndroidResource Include="Resources\drawable\VerticalEllipse.png" />
+    <AndroidResource Include="Resources\drawable\ShareWhite.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable\QRCodeWhite.xml" />
+    <AndroidResource Include="Resources\drawable\CheckInWhite.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderPLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityHeaderWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImagePLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\CityImageWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderPLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityHeaderWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImagePLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\CityImageWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderPLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityHeaderWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageELS.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImagePLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\CityImageWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderELS.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderPLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityHeaderWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageCPT.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageELS.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageGRJ.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageJNB.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImagePLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\CityImageWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderELS.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderPLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityHeaderHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageDUR.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageELS.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageHLA.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageHRE.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageLVI.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageMRU.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageNBO.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImagePLZ.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageVFA.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CityImageWDH.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\BackArrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\BackArrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\BackArrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\BackArrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\BackArrow.png" />
+    <AndroidResource Include="Resources\drawable-v24\ic_launcher_foreground.xml" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Background.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\Background.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross">
+      <Version>6.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Design">
+      <Version>6.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.V7.AppCompat">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.1.0.555618</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.CustomTabs">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
+      <Version>4.1.0.555618</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.2.0.223</Version>
+    </PackageReference>
+    <PackageReference Include="Refractored.XamForms.PullToRefresh">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="CardsView">
+      <Version>2.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Messaging">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>1.68.0</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views.Forms">
+      <Version>1.68.0</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp.Views">
+      <Version>1.68.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Analytics">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>2.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Configuration)'=='Debug' ">
+      <ItemGroup>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\values-v19\styles.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Nacelle.KMA.Core\Nacelle.KMA.Core.csproj">
+      <Project>{6D30B0EF-3A8B-43FB-98DD-274E2EDA21D2}</Project>
+      <Name>Nacelle.KMA.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nacelle.KMA.UI\Nacelle.KMA.UI.csproj">
+      <Project>{E7AB6442-59AF-4FA4-89A6-D733F28080E4}</Project>
+      <Name>Nacelle.KMA.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\glyphfont.ttf" />
+    <AndroidAsset Include="Assets\DownArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>

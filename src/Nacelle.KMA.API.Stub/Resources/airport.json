@@ -1,0 +1,1046 @@
+[
+    {
+        "IATA_CODE": "BPM",
+        "Name": "Bagram",
+        "CountrCode": "AF",
+        "CountryName": "Afghanistan"
+    },
+    {
+        "IATA_CODE": "KBL",
+        "Name": "Kabul",
+        "CountrCode": "AF",
+        "CountryName": "Afghanistan"
+    },
+    {
+        "IATA_CODE": "ALG",
+        "Name": "Algiers",
+        "CountrCode": "DZ",
+        "CountryName": "Algeria"
+    },
+    {
+        "IATA_CODE": "LAD",
+        "Name": "Luanda",
+        "CountrCode": "AO",
+        "CountryName": "Angola"
+    },
+    {
+        "IATA_CODE": "EZE",
+        "Name": "Buenos Aires",
+        "CountrCode": "AR",
+        "CountryName": "Argentina"
+    },
+    {
+        "IATA_CODE": "ADL",
+        "Name": "Adelaide",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "MEL",
+        "Name": "Melbourne",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "NTL",
+        "Name": "Newcastle (Aus)",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "PER",
+        "Name": "Perth",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "SYD",
+        "Name": "Sydney",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "BNE",
+        "Name": "Brisbane",
+        "CountrCode": "AU",
+        "CountryName": "Australia"
+    },
+    {
+        "IATA_CODE": "VIE",
+        "Name": "Vienna",
+        "CountrCode": "AT",
+        "CountryName": "Austria"
+    },
+    {
+        "IATA_CODE": "BAK",
+        "Name": "Baku",
+        "CountrCode": "AZ",
+        "CountryName": "Azerbaijan"
+    },
+    {
+        "IATA_CODE": "BAH",
+        "Name": "Bahrain",
+        "CountrCode": "BH",
+        "CountryName": "Bahrain"
+    },
+    {
+        "IATA_CODE": "DAC",
+        "Name": "Dhaka",
+        "CountrCode": "BD",
+        "CountryName": "Bangladesh"
+    },
+    {
+        "IATA_CODE": "LUX",
+        "Name": "Luxembourg",
+        "CountrCode": "BE",
+        "CountryName": "Belgium"
+    },
+    {
+        "IATA_CODE": "BRU",
+        "Name": "Brussels",
+        "CountrCode": "BE",
+        "CountryName": "Belgium"
+    },
+    {
+        "IATA_CODE": "GIG",
+        "Name": "Rio de Janeiro",
+        "CountrCode": "BR",
+        "CountryName": "Brazil"
+    },
+    {
+        "IATA_CODE": "GRU",
+        "Name": "Sao Paulo",
+        "CountrCode": "BR",
+        "CountryName": "Brazil"
+    },
+    {
+        "IATA_CODE": "YYZ",
+        "Name": "Toronto",
+        "CountrCode": "CA",
+        "CountryName": "Canada"
+    },
+    {
+        "IATA_CODE": "YVR",
+        "Name": "Vancouver",
+        "CountrCode": "CA",
+        "CountryName": "Canada"
+    },
+    {
+        "IATA_CODE": "PVG",
+        "Name": "Shanghai",
+        "CountrCode": "CN",
+        "CountryName": "China"
+    },
+    {
+        "IATA_CODE": "CAN",
+        "Name": "Guangzhou",
+        "CountrCode": "CN",
+        "CountryName": "China"
+    },
+    {
+        "IATA_CODE": "PEK",
+        "Name": "Beijing",
+        "CountrCode": "CN",
+        "CountryName": "China"
+    },
+    {
+        "IATA_CODE": "DLC",
+        "Name": "Dalian",
+        "CountrCode": "CN",
+        "CountryName": "China"
+    },
+    {
+        "IATA_CODE": "ABJ",
+        "Name": "Port Bouet (Abidjan)",
+        "CountrCode": "CI",
+        "CountryName": "Cote d'Ivoire"
+    },
+    {
+        "IATA_CODE": "LCA",
+        "Name": "Larnaca",
+        "CountrCode": "CY",
+        "CountryName": "Cyprus"
+    },
+    {
+        "IATA_CODE": "PRG",
+        "Name": "Prague",
+        "CountrCode": "CZ",
+        "CountryName": "Czech Republic"
+    },
+    {
+        "IATA_CODE": "CPH",
+        "Name": "Copenhagen",
+        "CountrCode": "DK",
+        "CountryName": "Denmark"
+    },
+    {
+        "IATA_CODE": "JIB",
+        "Name": "Djibouti",
+        "CountrCode": "DJ",
+        "CountryName": "Djibouti"
+    },
+    {
+        "IATA_CODE": "CAI",
+        "Name": "Cairo",
+        "CountrCode": "EG",
+        "CountryName": "Egypt"
+    },
+    {
+        "IATA_CODE": "ALY",
+        "Name": "Alexandria",
+        "CountrCode": "EG",
+        "CountryName": "Egypt"
+    },
+    {
+        "IATA_CODE": "ADD",
+        "Name": "Addis Ababa",
+        "CountrCode": "ET",
+        "CountryName": "Ethiopia"
+    },
+    {
+        "IATA_CODE": "CDG",
+        "Name": "Paris",
+        "CountrCode": "FR",
+        "CountryName": "France"
+    },
+    {
+        "IATA_CODE": "NCE",
+        "Name": "Nice",
+        "CountrCode": "FR",
+        "CountryName": "France"
+    },
+    {
+        "IATA_CODE": "LYS",
+        "Name": "Lyon",
+        "CountrCode": "FR",
+        "CountryName": "France"
+    },
+    {
+        "IATA_CODE": "MUC",
+        "Name": "Munich",
+        "CountrCode": "DE",
+        "CountryName": "Germany"
+    },
+    {
+        "IATA_CODE": "FRA",
+        "Name": "Frankfurt",
+        "CountrCode": "DE",
+        "CountryName": "Germany"
+    },
+    {
+        "IATA_CODE": "HHN",
+        "Name": "Hahn",
+        "CountrCode": "DE",
+        "CountryName": "Germany"
+    },
+    {
+        "IATA_CODE": "HAM",
+        "Name": "Hamburg",
+        "CountrCode": "DE",
+        "CountryName": "Germany"
+    },
+    {
+        "IATA_CODE": "DUS",
+        "Name": "Dusseldorf",
+        "CountrCode": "DE",
+        "CountryName": "Germany"
+    },
+    {
+        "IATA_CODE": "ACC",
+        "Name": "Accra",
+        "CountrCode": "GH",
+        "CountryName": "Ghana"
+    },
+    {
+        "IATA_CODE": "ATH",
+        "Name": "Athens",
+        "CountrCode": "GR",
+        "CountryName": "Greece"
+    },
+    {
+        "IATA_CODE": "CKY",
+        "Name": "Conakry",
+        "CountrCode": "GN",
+        "CountryName": "Guinea"
+    },
+    {
+        "IATA_CODE": "HKG",
+        "Name": "Hong Kong",
+        "CountrCode": "HK",
+        "CountryName": "Hong Kong"
+    },
+    {
+        "IATA_CODE": "BUD",
+        "Name": "Budapest",
+        "CountrCode": "HU",
+        "CountryName": "Hungary"
+    },
+    {
+        "IATA_CODE": "BLR",
+        "Name": "Bengaluru",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "MAA",
+        "Name": "Chennai",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "DEL",
+        "Name": "Delhi",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "AMD",
+        "Name": "Ahmedabad",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "HYD",
+        "Name": "Hyderabad",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "COK",
+        "Name": "Kochi",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "CCU",
+        "Name": "Kolkata",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "CCJ",
+        "Name": "Kozhikode",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "BOM",
+        "Name": "Mumbai",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "TRV",
+        "Name": "Thiruvananthapuram",
+        "CountrCode": "IN",
+        "CountryName": "India"
+    },
+    {
+        "IATA_CODE": "DPS",
+        "Name": "Denpasar (Bali)",
+        "CountrCode": "ID",
+        "CountryName": "Indonesia"
+    },
+    {
+        "IATA_CODE": "CGK",
+        "Name": "Jakarta",
+        "CountrCode": "ID",
+        "CountryName": "Indonesia"
+    },
+    {
+        "IATA_CODE": "IKA",
+        "Name": "Tehran",
+        "CountrCode": "IR",
+        "CountryName": "Iran"
+    },
+    {
+        "IATA_CODE": "BND",
+        "Name": "Bandar Abbas",
+        "CountrCode": "IR",
+        "CountryName": "Iran"
+    },
+    {
+        "IATA_CODE": "MHD",
+        "Name": "Mushhad",
+        "CountrCode": "IR",
+        "CountryName": "Iran"
+    },
+    {
+        "IATA_CODE": "BGW",
+        "Name": "Baghdad",
+        "CountrCode": "IQ",
+        "CountryName": "Iraq"
+    },
+    {
+        "IATA_CODE": "EBL",
+        "Name": "Erbil",
+        "CountrCode": "IQ",
+        "CountryName": "Iraq"
+    },
+    {
+        "IATA_CODE": "BSR",
+        "Name": "Basra",
+        "CountrCode": "IQ",
+        "CountryName": "Iraq"
+    },
+    {
+        "IATA_CODE": "DUB",
+        "Name": "Dublin",
+        "CountrCode": "IE",
+        "CountryName": "Ireland"
+    },
+    {
+        "IATA_CODE": "TLV",
+        "Name": "Tel Aviv",
+        "CountrCode": "IL",
+        "CountryName": "Israel"
+    },
+    {
+        "IATA_CODE": "VCE",
+        "Name": "Venice",
+        "CountrCode": "IT",
+        "CountryName": "Italy"
+    },
+    {
+        "IATA_CODE": "FCO",
+        "Name": "Rome",
+        "CountrCode": "IT",
+        "CountryName": "Italy"
+    },
+    {
+        "IATA_CODE": "MXP",
+        "Name": "Milan",
+        "CountrCode": "IT",
+        "CountryName": "Italy"
+    },
+    {
+        "IATA_CODE": "BLQ",
+        "Name": "Bologna",
+        "CountrCode": "IT",
+        "CountryName": "Italy"
+    },
+    {
+        "IATA_CODE": "KIX",
+        "Name": "Osaka",
+        "CountrCode": "JP",
+        "CountryName": "Japan"
+    },
+    {
+        "IATA_CODE": "NGY",
+        "Name": "Nagoya",
+        "CountrCode": "JP",
+        "CountryName": "Japan"
+    },
+    {
+        "IATA_CODE": "TYO",
+        "Name": "Tokyo",
+        "CountrCode": "JP",
+        "CountryName": "Japan"
+    },
+    {
+        "IATA_CODE": "HND",
+        "Name": "Tokyo (Haneda)",
+        "CountrCode": "JP",
+        "CountryName": "Japan"
+    },
+    {
+        "IATA_CODE": "NRT",
+        "Name": "Tokyo (Narita)",
+        "CountrCode": "JP",
+        "CountryName": "Japan"
+    },
+    {
+        "IATA_CODE": "AMM",
+        "Name": "Amman",
+        "CountrCode": "JO",
+        "CountryName": "Jordan"
+    },
+    {
+        "IATA_CODE": "ALA",
+        "Name": "Almaty",
+        "CountrCode": "KZ",
+        "CountryName": "Kazakhstan"
+    },
+    {
+        "IATA_CODE": "NBO",
+        "Name": "Nairobi",
+        "CountrCode": "KE",
+        "CountryName": "Kenya"
+    },
+    {
+        "IATA_CODE": "ICN",
+        "Name": "Seoul",
+        "CountrCode": "KR",
+        "CountryName": "Korea, Republic of"
+    },
+    {
+        "IATA_CODE": "KWI",
+        "Name": "Kuwait",
+        "CountrCode": "KW",
+        "CountryName": "Kuwait"
+    },
+    {
+        "IATA_CODE": "BEY",
+        "Name": "Beirut",
+        "CountrCode": "LB",
+        "CountryName": "Lebanon"
+    },
+    {
+        "IATA_CODE": "TIP",
+        "Name": "Tripoli",
+        "CountrCode": "LY",
+        "CountryName": "Libya"
+    },
+    {
+        "IATA_CODE": "LLW",
+        "Name": "Lilongwe",
+        "CountrCode": "MW",
+        "CountryName": "Malawi"
+    },
+    {
+        "IATA_CODE": "KUL",
+        "Name": "Kuala Lumpur",
+        "CountrCode": "MY",
+        "CountryName": "Malaysia"
+    },
+    {
+        "IATA_CODE": "MLE",
+        "Name": "Male",
+        "CountrCode": "MV",
+        "CountryName": "Maldives"
+    },
+    {
+        "IATA_CODE": "BKO",
+        "Name": "Bamako",
+        "CountrCode": "ML",
+        "CountryName": "Mali"
+    },
+    {
+        "IATA_CODE": "MLA",
+        "Name": "Malta",
+        "CountrCode": "MT",
+        "CountryName": "Malta"
+    },
+    {
+        "IATA_CODE": "MRU",
+        "Name": "Mauritius",
+        "CountrCode": "MU",
+        "CountryName": "Mauritius"
+    },
+    {
+        "IATA_CODE": "CMN",
+        "Name": "Casablanca",
+        "CountrCode": "MA",
+        "CountryName": "Morocco"
+    },
+    {
+        "IATA_CODE": "MPM",
+        "Name": "Maputo",
+        "CountrCode": "MZ",
+        "CountryName": "Mozambique"
+    },
+    {
+        "IATA_CODE": "WDH",
+        "Name": "Windhoek",
+        "CountrCode": "NA",
+        "CountryName": "Namibia"
+    },
+    {
+        "IATA_CODE": "AMS",
+        "Name": "Amsterdam",
+        "CountrCode": "NL",
+        "CountryName": "Netherlands"
+    },
+    {
+        "IATA_CODE": "AKL",
+        "Name": "Auckland",
+        "CountrCode": "NZ",
+        "CountryName": "New Zealand"
+    },
+    {
+        "IATA_CODE": "CHC",
+        "Name": "Christchurch",
+        "CountrCode": "NZ",
+        "CountryName": "New Zealand"
+    },
+    {
+        "IATA_CODE": "WLG",
+        "Name": "Wellington",
+        "CountrCode": "NZ",
+        "CountryName": "New Zealand"
+    },
+    {
+        "IATA_CODE": "LOS",
+        "Name": "Lagos",
+        "CountrCode": "NG",
+        "CountryName": "Nigeria"
+    },
+    {
+        "IATA_CODE": "OSL",
+        "Name": "Oslo",
+        "CountrCode": "NO",
+        "CountryName": "Norway"
+    },
+    {
+        "IATA_CODE": "MCT",
+        "Name": "Muscat",
+        "CountrCode": "OM",
+        "CountryName": "Oman"
+    },
+    {
+        "IATA_CODE": "LHE",
+        "Name": "Lahore",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "KHI",
+        "Name": "Karachi",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "ISB",
+        "Name": "Islamabad",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "PEW",
+        "Name": "Peshawar",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "MUX",
+        "Name": "Multan",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "SKT",
+        "Name": "Sialkot",
+        "CountrCode": "PK",
+        "CountryName": "Pakistan"
+    },
+    {
+        "IATA_CODE": "PTY",
+        "Name": "Panama City",
+        "CountrCode": "PA",
+        "CountryName": "Panama"
+    },
+    {
+        "IATA_CODE": "CRK",
+        "Name": "Clark",
+        "CountrCode": "PH",
+        "CountryName": "Philippines"
+    },
+    {
+        "IATA_CODE": "MNL",
+        "Name": "Manila",
+        "CountrCode": "PH",
+        "CountryName": "Philippines"
+    },
+    {
+        "IATA_CODE": "WAW",
+        "Name": "Warsaw",
+        "CountrCode": "PL",
+        "CountryName": "Poland"
+    },
+    {
+        "IATA_CODE": "LIS",
+        "Name": "Lisbon",
+        "CountrCode": "PT",
+        "CountryName": "Portugal"
+    },
+    {
+        "IATA_CODE": "DOH",
+        "Name": "Doha",
+        "CountrCode": "QA",
+        "CountryName": "Qatar"
+    },
+    {
+        "IATA_CODE": "DME",
+        "Name": "Moscow",
+        "CountrCode": "RU",
+        "CountryName": "Russian Federation"
+    },
+    {
+        "IATA_CODE": "LED",
+        "Name": "St. Petersburg",
+        "CountrCode": "RU",
+        "CountryName": "Russian Federation"
+    },
+    {
+        "IATA_CODE": "RUH",
+        "Name": "Riyadh",
+        "CountrCode": "SA",
+        "CountryName": "Saudi Arabia"
+    },
+    {
+        "IATA_CODE": "DMM",
+        "Name": "Dammam",
+        "CountrCode": "SA",
+        "CountryName": "Saudi Arabia"
+    },
+    {
+        "IATA_CODE": "DKR",
+        "Name": "Dakar",
+        "CountrCode": "SN",
+        "CountryName": "Senegal"
+    },
+    {
+        "IATA_CODE": "SEZ",
+        "Name": "Mahe Island",
+        "CountrCode": "SC",
+        "CountryName": "Seychelles"
+    },
+    {
+        "IATA_CODE": "SIN",
+        "Name": "Singapore",
+        "CountrCode": "SG",
+        "CountryName": "Singapore"
+    },
+    {
+        "IATA_CODE": "ELS",
+        "Name": "East London",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "JNB",
+        "Name": "O.R. Tambo (Jo'burg)",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "HLA",
+        "Name": "Lanseria (Jo'burg)",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "DUR",
+        "Name": "King Shaka (Durban)",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "CPT",
+        "Name": "Cape Town",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "GRJ",
+        "Name": "George",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "PLZ",
+        "Name": "Port Elizabeth",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "MQP",
+        "Name": "Nelspruit",
+        "CountrCode": "ZA",
+        "CountryName": "South Africa"
+    },
+    {
+        "IATA_CODE": "BCN",
+        "Name": "Barcelona",
+        "CountrCode": "ES",
+        "CountryName": "Spain"
+    },
+    {
+        "IATA_CODE": "MAD",
+        "Name": "Madrid",
+        "CountrCode": "ES",
+        "CountryName": "Spain"
+    },
+    {
+        "IATA_CODE": "ZAZ",
+        "Name": "Zaragoza",
+        "CountrCode": "ES",
+        "CountryName": "Spain"
+    },
+    {
+        "IATA_CODE": "CMB",
+        "Name": "Colombo",
+        "CountrCode": "LK",
+        "CountryName": "Sri Lanka"
+    },
+    {
+        "IATA_CODE": "KRT",
+        "Name": "Khartoum",
+        "CountrCode": "SD",
+        "CountryName": "Sudan"
+    },
+    {
+        "IATA_CODE": "GOT",
+        "Name": "Gothenburg",
+        "CountrCode": "SE",
+        "CountryName": "Sweden"
+    },
+    {
+        "IATA_CODE": "ARN",
+        "Name": "Stockholm",
+        "CountrCode": "SE",
+        "CountryName": "Sweden"
+    },
+    {
+        "IATA_CODE": "ZRH",
+        "Name": "Zurich",
+        "CountrCode": "CH",
+        "CountryName": "Switzerland"
+    },
+    {
+        "IATA_CODE": "GVA",
+        "Name": "Geneva",
+        "CountrCode": "CH",
+        "CountryName": "Switzerland"
+    },
+    {
+        "IATA_CODE": "DAM",
+        "Name": "Damascus",
+        "CountrCode": "SY",
+        "CountryName": "Syrian Arab Republic"
+    },
+    {
+        "IATA_CODE": "TPE",
+        "Name": "Taipei",
+        "CountrCode": "TW",
+        "CountryName": "Taiwan"
+    },
+    {
+        "IATA_CODE": "DAR",
+        "Name": "Dar es Salaam",
+        "CountrCode": "TZ",
+        "CountryName": "Tanzania"
+    },
+    {
+        "IATA_CODE": "BKK",
+        "Name": "Bangkok",
+        "CountrCode": "TH",
+        "CountryName": "Thailand"
+    },
+    {
+        "IATA_CODE": "HKT",
+        "Name": "Phuket",
+        "CountrCode": "TH",
+        "CountryName": "Thailand"
+    },
+    {
+        "IATA_CODE": "TUN",
+        "Name": "Tunis",
+        "CountrCode": "TN",
+        "CountryName": "Tunisia"
+    },
+    {
+        "IATA_CODE": "IST",
+        "Name": "Istanbul",
+        "CountrCode": "TR",
+        "CountryName": "Turkey"
+    },
+    {
+        "IATA_CODE": "SAW",
+        "Name": "Sabiha Gokcen",
+        "CountrCode": "TR",
+        "CountryName": "Turkey"
+    },
+    {
+        "IATA_CODE": "EBB",
+        "Name": "Entebbe",
+        "CountrCode": "UG",
+        "CountryName": "Uganda"
+    },
+    {
+        "IATA_CODE": "KBP",
+        "Name": "Kiev",
+        "CountrCode": "UA",
+        "CountryName": "Ukraine"
+    },
+    {
+        "IATA_CODE": "DXB",
+        "Name": "Dubai",
+        "CountrCode": "AE",
+        "CountryName": "United Arab Emirates"
+    },
+    {
+        "IATA_CODE": "AUH",
+        "Name": "Abu Dhabi",
+        "CountrCode": "AE",
+        "CountryName": "United Arab Emirates"
+    },
+    {
+        "IATA_CODE": "LHR",
+        "Name": "London Heathrow",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "LGW",
+        "Name": "London Gatwick",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "BHX",
+        "Name": "Birmingham",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "GLA",
+        "Name": "Glasgow",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "LON",
+        "Name": "London",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "MAN",
+        "Name": "Manchester (UK)",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "NCL",
+        "Name": "Newcastle (UK)",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "EDI",
+        "Name": "Edinburgh",
+        "CountrCode": "GB",
+        "CountryName": "United Kingdom"
+    },
+    {
+        "IATA_CODE": "BOS",
+        "Name": "Boston",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "IAD",
+        "Name": "Washington DC",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "MCO",
+        "Name": "Orlando",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "NYC",
+        "Name": "New York",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "JFK",
+        "Name": "New York (JFK)",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "EWR",
+        "Name": "New York (Newark)",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "SEA",
+        "Name": "Seattle",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "MHT",
+        "Name": "Manchester (USA)",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "IAH",
+        "Name": "Houston",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "DFW",
+        "Name": "Dallas Fort Worth",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "LAX",
+        "Name": "Los Angeles",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "SFO",
+        "Name": "San Francisco",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "ORD",
+        "Name": "Chicago",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "MIA",
+        "Name": "Miami",
+        "CountrCode": "US",
+        "CountryName": "United States"
+    },
+    {
+        "IATA_CODE": "SGN",
+        "Name": "Ho Chi Minh",
+        "CountrCode": "VN",
+        "CountryName": "Vietnam"
+    },
+    {
+        "IATA_CODE": "SAH",
+        "Name": "Sana'a",
+        "CountrCode": "YE",
+        "CountryName": "Yemen"
+    },
+    {
+        "IATA_CODE": "LUN",
+        "Name": "Lusaka",
+        "CountrCode": "ZM",
+        "CountryName": "Zambia"
+    },
+    {
+        "IATA_CODE": "LVI",
+        "Name": "Livingstone",
+        "CountrCode": "ZM",
+        "CountryName": "Zambia"
+    },
+    {
+        "IATA_CODE": "VFA",
+        "Name": "Victoria Falls",
+        "CountrCode": "ZW",
+        "CountryName": "Zimbabwe"
+    },
+    {
+        "IATA_CODE": "HRE",
+        "Name": "Harare",
+        "CountrCode": "ZW",
+        "CountryName": "Zimbabwe"
+    }
+]

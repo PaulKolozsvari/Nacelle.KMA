@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage
+    x:TypeArguments="viewModels:CheckInViewModel"
+    x:Class="Nacelle.KMA.UI.Pages.CheckInPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    NavigationPage.HasNavigationBar="false"
+    ios:Page.UseSafeArea="true"
+    Icon="TabIconCheckIn"
+    Title="Check-In"
+    Visual="Material">
+    <StackLayout>
+        <views:CustomNavigationBar
+            x:Name="NavigationBar"
+            Title="Check-in"
+            IsBackButtonVisible="false" />
+        <ScrollView>
+            <StackLayout Spacing="0" Style="{StaticResource Container}">
+                    <Label Text="Check-in"
+                    Style="{StaticResource Heading1}" Margin="0,0,0,10" />
+                <Label Text ="Check-in is open for the following flights"
+                   Style="{StaticResource Heading5}"
+                   IsVisible="{Binding BookingItems, Converter={StaticResource HasItems}}" />
+                <views:TripCardWithBannerCoverFlowView
+                    PositionShiftValue="40"
+                    IsCyclical="false"
+                    x:Name="TripCards"
+                    ItemsSource="{Binding BookingItems}"
+                    IsVisible="{Binding BookingItems, Converter={StaticResource HasItems}}"
+                    Margin="0,10"/>
+                <StackLayout Spacing="0">
+                    <views:FindBookingView
+                        Description="{Binding BookingItems, Converter={StaticResource HasBookingItemsToFindBookingDescription}, Mode=OneWay}"
+                        BookingReference="{Binding BookingReference}"
+                        ValidationPropertyNameBookingReference="BookingReference"
+                        LastName="{Binding LastName}"
+                        ValidationPropertyNameLastName="LastName"
+                        ButtonTitle="CHECK-IN"
+                        FindBookingCommand="{Binding CheckInCommand}" />
+                    <views:ErrorView
+                        IsVisible="{Binding ErrorMessage, Converter={StaticResource NotNullOrEmptyString}}"
+                        ErrorMessage="{Binding ErrorMessage}" />
+                    <views:InfoView                        
+                        InfoMessage="Flights operated by other airlines will not be accessible through the kulula.com mobile app and you'll need to visit the respective airline's website for check-in." />
+                </StackLayout>
+            </StackLayout>
+            <ScrollView.Behaviors>
+                <behaviors:ScrollingTitleBehavior
+                    CustomNavigationBar="{Binding Source={x:Reference NavigationBar}}" />
+            </ScrollView.Behaviors>
+        </ScrollView>
+    </StackLayout>
+</local:BaseContentPage>

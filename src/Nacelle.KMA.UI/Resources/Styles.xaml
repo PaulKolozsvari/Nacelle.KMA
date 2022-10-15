@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Nacelle.KMA.UI.Resources.Styles"
+                    xmlns:local="clr-namespace:Nacelle.KMA.UI.Resources">
+
+    <!--
+  QuickHelpGuide:
+    BorderThickness="1,2,3,4" (Left,Top,Right,Bottom)
+  -->
+
+    <!--FONTS-->
+    <OnPlatform x:Key="FlamaFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Flama-Semibold" />
+        <On Platform="Android" Value="Flama-Semibold.otf#Flama-Semibold" />
+    </OnPlatform>
+
+    <OnPlatform x:Key="OpenSansFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Open Sans" />
+        <On Platform="Android" Value="OpenSans-Regular.ttf#OpenSans-Regular" />
+    </OnPlatform>
+
+    <!--Primary Colours-->
+    <Color x:Key="PrimaryGreen">#8BC63E</Color>
+    <Color x:Key="PrimaryBlue">#00BCE4</Color>
+    <Color x:Key="PrimaryBlack">#000000</Color>
+    <Color x:Key="PrimaryGrey">#666666</Color>
+    <Color x:Key="PrimaryWhite">#ffffff</Color>
+
+    <!--Darker Primary Colours-->
+    <Color x:Key="Green2">#7DB137</Color>
+    <Color x:Key="Green3">#71A130</Color>
+    <Color x:Key="Blue2">#00A7CA</Color>
+    <Color x:Key="Blue3">#0092B3</Color>
+    <Color x:Key="Blue4">#006880</Color>
+    <Color x:Key="Blue5">#004352</Color>
+
+    <!--Lighter Primary Colours-->
+    <Color x:Key="Grey2">#BBBBBB</Color>
+    <Color x:Key="Grey3">#DDDDDD</Color>
+    <Color x:Key="Grey4">#EEEEEE</Color>
+    <Color x:Key="Grey5">#EFEFEF</Color>
+    <Color x:Key="Grey6">#F9F9F9</Color>
+
+    <!--Message Colours-->
+    <Color x:Key="SuccessLight">#EAF6EA</Color>
+    <Color x:Key="SuccessMedium">#3FA553</Color>
+    <Color x:Key="SuccessDark">#307E40</Color>
+    <Color x:Key="InfoLight">#CDECFA</Color>
+    <Color x:Key="InfoMedium">#2D86B3</Color>
+    <Color x:Key="InfoDark">#206080</Color>
+    <Color x:Key="ErrorLight">#F9DEE7</Color>
+    <Color x:Key="ErrorMedium">#AC0000</Color>
+    <Color x:Key="ErrorDark">#910000</Color>
+    <Color x:Key="NBLight">#FFF3B8</Color>
+    <Color x:Key="NBMedium">#F0A328</Color>
+    <Color x:Key="NBDark">#B97811</Color>
+
+    <Color x:Key="TripCardCollapsedPrimaryColor" >#00A7CA</Color>
+    <Color x:Key="TripCardCollapsedSecondaryColor">#0092B3</Color>
+    <Color x:Key="TripCardExpandedPrimaryColor">#0092B3</Color>
+    <Color x:Key="TripCardExpandedSecondaryColor">#006880</Color>
+
+
+    <!--App-->
+    <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <!-- Navigation -->
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource Grey4}"/>
+        <Setter Property="BarTextColor" Value="{StaticResource PrimaryGrey}"/>
+    </Style>
+
+
+    <!--Containers-->
+    <Style x:Key="Container" TargetType="StackLayout">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryWhite}"/>
+    </Style>
+    
+    <Style x:Key="ContainerFrame" TargetType="Frame">
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryWhite}"/>
+    </Style>
+
+    <Style x:Key="Boxed" TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryWhite}"/>
+        <Setter Property="HasShadow" Value="False"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Margin" Value="20,5"/>
+        <Setter Property="CornerRadius" Value="5"/>
+    </Style>
+
+    <Style x:Key="BoxedBordered" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BorderColor" Value="{StaticResource Grey3}"/>
+    </Style>
+
+    <Style x:Key="BoxedFilled" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BorderColor" Value="{StaticResource Blue3}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Blue3}"/>        
+    </Style>
+
+    <Style x:Key="BoxedError" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BackgroundColor" Value="{StaticResource ErrorLight}"/>
+    </Style>
+
+    <Style x:Key="BoxedNB" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BackgroundColor" Value="{StaticResource NBLight}"/>
+    </Style>
+
+    <Style x:Key="BoxedInfo" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BackgroundColor" Value="{StaticResource InfoLight}"/>
+    </Style>
+
+    <Style x:Key="BoxedSuccess" TargetType="Frame" BasedOn="{StaticResource Boxed}">
+        <Setter Property="BackgroundColor" Value="{StaticResource SuccessLight}"/>
+    </Style>
+
+    <Style x:Key="ButtonSpacing" TargetType="Frame">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0,10,0,10"/>
+        <Setter Property="HasShadow" Value="False"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+    </Style>
+
+    <Style x:Key="HeadingSpacing" TargetType="Frame">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="HasShadow" Value="False"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+    </Style>
+
+
+    <!--Labels-->
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource OpenSansFamily}" />
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryGrey}" />
+        <Setter Property="FontSize"  Value="13" />
+    </Style>
+
+    <Style x:Key="Heading1" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FlamaFamily}" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryBlack}" />
+        <Setter Property="FontSize"  Value="25" />
+        <!--32-->
+    </Style>
+
+    <Style x:Key="Heading1W" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Heading2" TargetType="Label" >
+        <Setter Property="FontSize"  Value="25" />
+    </Style>
+
+    <Style x:Key="Heading2W" TargetType="Label" BasedOn="{StaticResource Heading2}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Heading3" TargetType="Label" >
+        <Setter Property="FontSize"  Value="20" />
+    </Style>
+
+    <Style x:Key="Heading3W" TargetType="Label" BasedOn="{StaticResource Heading3}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Heading4" TargetType="Label" >
+        <Setter Property="FontSize"  Value="18" />
+    </Style>
+
+    <Style x:Key="Heading4W" TargetType="Label" BasedOn="{StaticResource Heading4}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Heading5" TargetType="Label" >
+        <Setter Property="FontSize"  Value="16" />
+    </Style>
+
+    <Style x:Key="Heading5W" TargetType="Label" BasedOn="{StaticResource Heading5}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Heading6" TargetType="Label" >
+        <Setter Property="FontSize"  Value="13" />
+    </Style>
+
+    <Style x:Key="Heading6W" TargetType="Label" BasedOn="{StaticResource Heading6}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="ContentCopy" TargetType="Label" >
+        <Setter Property="FontSize"  Value="13" />
+    </Style>
+
+    <Style x:Key="ElementCopy" TargetType="Label" >
+        <Setter Property="FontSize"  Value="16" />
+    </Style>
+
+    <Style x:Key="ElementCopyW" TargetType="Label" BasedOn="{StaticResource ElementCopy}" >
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="Paragraph" TargetType="Label" BasedOn="{StaticResource ContentCopy}" >
+        <Setter Property="Margin" Value="0,0,0,18" />
+    </Style>
+
+    <Style x:Key="MessageCopy" TargetType="Label" >
+        <Setter Property="FontSize"  Value="13" />
+    </Style>
+
+    <Style x:Key="MsgHeading" TargetType="Label" >
+        <Setter Property="FontSize"  Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="MsgHeadingSuccess" TargetType="Label" BasedOn="{StaticResource MsgHeading}" >
+        <Setter Property="TextColor"  Value="{StaticResource SuccessMedium}" />
+    </Style>
+
+    <Style x:Key="MsgHeadingInfo" TargetType="Label" BasedOn="{StaticResource MsgHeading}" >
+        <Setter Property="TextColor"  Value="{StaticResource InfoDark}" />
+    </Style>
+
+    <Style x:Key="MsgBodyError" TargetType="Label" BasedOn="{StaticResource Paragraph}" >
+        <Setter Property="TextColor"  Value="{StaticResource ErrorMedium}" />
+    </Style>
+
+    <Style x:Key="ToastBodyError" TargetType="Label" >
+        <Setter Property="TextColor"  Value="{StaticResource ErrorMedium}" />
+    </Style>
+
+    <Style x:Key="ToastBodyInfo" TargetType="Label" >
+        <Setter Property="TextColor"  Value="{StaticResource InfoMedium}" />
+    </Style>
+
+    <Style x:Key="MsgHeadingNB" TargetType="Label" BasedOn="{StaticResource MsgHeading}" >
+        <Setter Property="TextColor"  Value="{StaticResource NBMedium}" />
+    </Style>
+
+    <Style x:Key="TripCardHeading" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FlamaFamily}" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryBlack}" />
+        <Setter Property="FontSize"  Value="32" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="TripCardHeadingW" TargetType="Label" BasedOn="{StaticResource TripCardHeading}">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="CityBookingCard" TargetType="Label" BasedOn="{StaticResource Heading1}">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryWhite}" />
+        <Setter Property="FontSize"  Value="32" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="TripCardHeading2" TargetType="Label">
+        <Setter Property="FontSize"  Value="16" />
+    </Style>
+
+    <Style x:Key="TripCardHeading2W" TargetType="Label" BasedOn="{StaticResource TripCardHeading2}">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="TripCardContent" TargetType="Label">
+        <Setter Property="FontSize"  Value="13" />
+    </Style>
+
+    <Style x:Key="TripCardContentW" TargetType="Label" BasedOn="{StaticResource TripCardContent}">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryWhite}" />
+    </Style>
+
+    <Style x:Key="TripCardButton" TargetType="Frame" BasedOn="{StaticResource BoxedBordered}">
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
+    
+    <!--Links-->
+    <Style x:Key="hyperLink" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryGreen}" />
+        <Setter Property="TextDecorations" Value="Underline"/>
+    </Style>
+
+
+    <!--Buttons-->
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource OpenSansFamily}" />
+        <Setter Property="FontSize"  Value="16" />
+        <Setter Property="WidthRequest" Value="440"/>
+        <!--<Setter Property="Margin" Value="10, 20, 10, 10" />-->
+        <!--<Setter Property="BorderWidth" Value="1,1,1,10" />-->
+    </Style>
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryGreen}" />
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+        <Setter Property="BorderColor" Value="{StaticResource Green2}" />
+    </Style>
+
+    <Style x:Key="PrimaryButtonLarge" TargetType="Button" BasedOn="{StaticResource PrimaryButton}"  >
+        <Setter Property="HeightRequest"  Value="60" />
+    </Style>
+
+    <Style x:Key="PrimaryButtonMedium" TargetType="Button"  BasedOn="{StaticResource PrimaryButton}"  >
+        <Setter Property="HeightRequest"  Value="36" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+
+    <Style x:Key="PrimaryButtonSmall" TargetType="Button"  BasedOn="{StaticResource PrimaryButton}"  >
+        <Setter Property="HeightRequest"  Value="28" />
+        <Setter Property="BorderWidth" Value="1,1,1,1" />
+    </Style>
+
+    <Style x:Key="SecondaryButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBlue}" />
+        <Setter Property="TextColor"  Value="{StaticResource PrimaryWhite}" />
+        <Setter Property="BorderColor" Value="{StaticResource Blue3}" />
+    </Style>
+
+    <Style x:Key="SecondaryButtonLarge" TargetType="Button"  BasedOn="{StaticResource SecondaryButton}"  >
+        <Setter Property="HeightRequest"  Value="60" />
+    </Style>
+
+    <Style x:Key="SecondaryButtonMedium" TargetType="Button"  BasedOn="{StaticResource SecondaryButton}"  >
+        <Setter Property="HeightRequest"  Value="36" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+
+    <Style x:Key="SecondaryButtonSmall" TargetType="Button"  BasedOn="{StaticResource SecondaryButton}"  >
+        <Setter Property="HeightRequest"  Value="28" />
+        <Setter Property="BorderWidth" Value="1,1,1,1" />
+    </Style>
+
+    <Style x:Key="TransparentButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryBlue}" />
+        <Setter Property="BorderColor" Value="{StaticResource PrimaryGrey}" />
+    </Style>
+
+    <Style x:Key="TransparentButtonLarge" TargetType="Button" BasedOn="{StaticResource TransparentButton}" >
+        <Setter Property="HeightRequest"  Value="60" />
+    </Style>
+
+    <Style x:Key="TransparentButtonMedium" TargetType="Button"  BasedOn="{StaticResource TransparentButton}"  >
+        <Setter Property="HeightRequest"  Value="36" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+
+    <Style x:Key="TransparentButtonSmall" TargetType="Button"  BasedOn="{StaticResource TransparentButton}"  >
+        <Setter Property="HeightRequest"  Value="28" />
+        <Setter Property="BorderWidth" Value="1,1,1,1" />
+    </Style>
+
+
+    <!--TextBoxes-->
+    <Style x:Key="PrimaryEntry" TargetType="Entry">
+        <Setter Property="FontFamily" Value="{StaticResource OpenSansFamily}"/>
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryGrey}"/>
+        <Setter Property="HeightRequest" Value="60"/>
+    </Style>
+
+    <Style x:Key="EntryFrame" TargetType="Frame">
+        <Setter Property="BorderColor" Value="{StaticResource Grey3}" />
+        <Setter Property="HasShadow" Value="False"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+    </Style>
+
+</ResourceDictionary>
+ 

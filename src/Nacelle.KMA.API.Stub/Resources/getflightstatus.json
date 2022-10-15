@@ -1,0 +1,22 @@
+﻿{
+  "LatestDepartureDateTime": "2019-07-21T07:50:00+02:00",
+  "LatestArrivalDateTime": "2019-07-21T09:45:00+02:00",
+  "Status": "ONTIME",
+  "EstimatedTimeDeparture": null,
+  "EstimatedTimeArrival": null,
+  "ActualTimeDeparture": null,
+  "ActualTimeArrival": null,
+  "RunwayOff": null,
+  "RunwayOn": null,
+  "DepartureTerminal": "",
+  "ArrivalTerminal": "",
+  "DepartureGate": null,
+  "ArrivalGate": null,
+  "ScheduledTimeDeparture": "2019-07-21T07:50:00+02:00",
+  "ScheduledTimeArrival": "2019-07-21T09:45:00+02:00",
+  "AirlineCode": "MN",
+  "FlightNumber": 468,
+  "DepartureDate": "2019-07-21T00:00:00",
+  "DepartureCode": "CPT",
+  "ArrivalCode": "HLA"
+}

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:SelectSeatViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.SelectSeatPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:converters="clr-namespace:Nacelle.KMA.UI.Converters"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:templates="clr-namespace:Nacelle.KMA.UI.Templates"
+    ios:Page.UseSafeArea="true"
+    Title="Select Seat"
+    Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CheckInItemsToBoolValueConverter x:Key="CheckInItemsToBool" />
+            <converters:SeatStatusTypeToResourcePathValueConverter x:Key="SeatStatusToResourcePath" />
+        </ResourceDictionary>
+        
+        <Style x:Key="ColumnHeaderStyle" TargetType="Label" BasedOn="{StaticResource Heading4}">
+            <Setter Property="Margin" Value="0, 5" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+        </Style>
+        
+        <DataTemplate x:Key="LeftExitTemplate">
+           <Label Grid.Column="0" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.AngleDoubleLeft}" FontSize="20" TextColor="{StaticResource PrimaryGrey}" VerticalOptions="Fill" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource PrimaryWhite}"/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RightExitTemplate">
+            <Label Grid.Column="8" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.AngleDoubleRight}" FontSize="20" TextColor="{StaticResource PrimaryGrey}" VerticalOptions="Fill" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource PrimaryWhite}" />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="LeftWindowTemplate">
+            <ContentView Grid.Column="0" BackgroundColor="{StaticResource PrimaryWhite}"/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RightWindowTemplate">
+            <ContentView Grid.Column="8" BackgroundColor="{StaticResource PrimaryWhite}"/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RemovedSeatTemplate">
+            <ContentView Grid.Column="{Binding Column}" />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="AisleTemplate">
+            <Label Text="{Binding Row}" Grid.Column="4" Style="{StaticResource Heading6}" HorizontalOptions="Center" VerticalOptions="Fill" VerticalTextAlignment="Center" />
+        </DataTemplate>
+        
+       <DataTemplate x:Key="SeatTemplate">
+            <Grid Grid.Column="{Binding Column}">
+                <ffimageloadingsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" 
+                                                  Source="{Binding SeatStatus, Converter={StaticResource SeatStatusToResourcePath}}" 
+                                                  VerticalOptions="Start" Aspect="AspectFit" HeightRequest="50" />
+                <Label Grid.Row="0" Grid.Column="0" 
+                       Text="{Binding Label}" FontAttributes="Bold"
+                       TextColor="{StaticResource PrimaryWhite}" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Command="{Binding SelectSeatCommand}" NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="RowTemplate">
+            <Grid BindableLayout.ItemsSource="{Binding SeatItems}" BindableLayout.ItemTemplateSelector="{StaticResource SeatDataTemplateSelector}" HeightRequest="40">
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                 </Grid.ColumnDefinitions>
+            </Grid>
+        </DataTemplate>
+        
+        <templates:RowDataTemplateSelector x:Key="RowDataTemplateSelector"
+           RowTemplate="{StaticResource RowTemplate}" />
+        
+        <templates:SeatDataTemplateSelector x:Key="SeatDataTemplateSelector"
+            LeftExitTemplate="{StaticResource LeftExitTemplate}"
+            RightExitTemplate="{StaticResource RightExitTemplate}"
+            AisleTemplate="{StaticResource AisleTemplate}"
+            SeatTemplate="{StaticResource SeatTemplate}"
+            RemovedSeatTemplate="{StaticResource RemovedSeatTemplate}"
+            LeftWindowTemplate="{StaticResource LeftWindowTemplate}"
+            RightWindowTemplate="{StaticResource RightWindowTemplate}" />
+        
+    </ContentPage.Resources>    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Command="{Binding CancelCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid RowSpacing="0" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="{StaticResource Blue4}" Padding="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="60" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.RowSpan="2" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.Circle}" FontSize="40" TextColor="{StaticResource Blue5}" VerticalOptions="Fill" VerticalTextAlignment="Center" HorizontalOptions="Fill" HorizontalTextAlignment="Center" />
+                    <Label Grid.RowSpan="2" Text="{Binding SelectedTraveller.Index}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Style="{StaticResource Heading3W}" />
+                    <Label Grid.Column="1" Text="{Binding SelectedTraveller.Name}"  Style="{StaticResource Heading3W}" VerticalTextAlignment="End" />
+                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding SelectedTraveller.SeatDescription}" Style="{StaticResource ElementCopyW}" VerticalOptions="Fill" VerticalTextAlignment="Start" />
+                    <Label Grid.Column="2" IsVisible="{Binding Parameter.CheckInItems, Converter={StaticResource CheckInItemsToBool}}" Grid.RowSpan="2" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.DownOpenMini}" FontSize="40" TextColor="{StaticResource PrimaryWhite}" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                             <TapGestureRecognizer Tapped="TravellerSelectorTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Grid.Column="3" Grid.RowSpan="2" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.HelpCircled}" FontSize="35" TextColor="{StaticResource PrimaryWhite}" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                             <TapGestureRecognizer Command="{Binding OpenHelpCommand}" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="1" BackgroundColor="{StaticResource Grey6}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1" Text="A"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <Label Grid.Column="2" Text="B"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <Label Grid.Column="3" Text="C"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <Label Grid.Column="5" Text="D"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <Label Grid.Column="6" Text="E"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <Label Grid.Column="7" Text="F"  Style="{StaticResource ColumnHeaderStyle}"/>
+                    <BoxView Grid.ColumnSpan="9" Color="Silver" HeightRequest="1" VerticalOptions="EndAndExpand" />
+                </Grid>
+                <ScrollView Grid.Row="2">
+                    <StackLayout x:Name="parentStack" BackgroundColor="{StaticResource Grey6}" BindableLayout.ItemsSource="{Binding RowItems}" BindableLayout.ItemTemplateSelector="{StaticResource RowDataTemplateSelector}" Spacing="0" />
+                </ScrollView>                
+                <BoxView Grid.Row="3" BackgroundColor="{StaticResource PrimaryWhite}" />
+                <BoxView Grid.Row="3" Color="Silver" HeightRequest="1" VerticalOptions="Start" />
+                <StackLayout Grid.Row="3" Style="{StaticResource Container}">
+                    <Button Style="{StaticResource PrimaryButtonLarge}" Text="CONFIRM SELECTION" Command="{Binding ConfirmSelectionCommand}" />
+                </StackLayout>
+            </Grid>
+            <Grid RowSpacing="0" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding IsHelpVisible}" BackgroundColor="Transparent">
+                <BoxView BackgroundColor="Black" Opacity="0.5" />
+                <Frame HasShadow="true" HorizontalOptions="Center" VerticalOptions="Center" Margin="35 ,0" Padding="20, 10" >
+                    <Grid  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition  Width="30"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Text="Seat selection key" Style="{StaticResource Heading5}" Grid.ColumnSpan="2" VerticalTextAlignment="Center"  />
+                        <Label Grid.Column="2" FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.CancelSquared}" FontSize="30" TextColor="{StaticResource ErrorMedium}" VerticalOptions="Fill" VerticalTextAlignment="Start" HorizontalOptions="Fill" HorizontalTextAlignment="End">
+                            <Label.GestureRecognizers>
+                                 <TapGestureRecognizer Command="{Binding CloseHelpCommand}" NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <ffimageloadingsvg:SvgCachedImage Grid.Row="1" Source="resource://Nacelle.KMA.UI.Resources.Images.selected-seat-active.svg" Grid.Column="{Binding Column}" VerticalOptions="Start" Aspect="AspectFit " HeightRequest="50"  />
+                        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  Text="Selected" VerticalOptions="Center" Style="{StaticResource ElementCopy}" />
+                        <ffimageloadingsvg:SvgCachedImage Grid.Row="2" Source="resource://Nacelle.KMA.UI.Resources.Images.available-seat-inactive.svg" Grid.Column="{Binding Column}" VerticalOptions="Start" Aspect="AspectFit " HeightRequest="50"  />
+                        <Label Grid.Column="1" Grid.Row="2" Text="Standard front" Grid.ColumnSpan="2"  VerticalOptions="Center" Style="{StaticResource ElementCopy}" />
+                        <ffimageloadingsvg:SvgCachedImage Grid.Row="3" Source="resource://Nacelle.KMA.UI.Resources.Images.selected-seat-traveller.svg" Grid.Column="{Binding Column}" VerticalOptions="Start" Aspect="AspectFit " HeightRequest="50"  />
+                        <Label Grid.Column="1" Grid.Row="3" Text="Traveller" Grid.ColumnSpan="2" VerticalOptions="Center" Style="{StaticResource ElementCopy}" />
+                        <ffimageloadingsvg:SvgCachedImage Grid.Row="4" Source="resource://Nacelle.KMA.UI.Resources.Images.unavailable-seat.svg" Grid.Column="{Binding Column}" VerticalOptions="Start" Aspect="AspectFit " HeightRequest="50"  />
+                        <Label Grid.Column="1" Grid.Row="4" Text="Unavailable" Grid.ColumnSpan="2" VerticalOptions="Center" Style="{StaticResource ElementCopy}" />                     
+                    </Grid>
+                </Frame>
+            </Grid>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</local:BaseContentPage>

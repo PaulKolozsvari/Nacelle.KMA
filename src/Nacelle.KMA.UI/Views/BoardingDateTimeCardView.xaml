@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nacelle.KMA.UI.Views.BoardingDateTimeCardView">
+    <StackLayout BackgroundColor="{StaticResource Blue5}" Padding="20,10">
+        <Label Text="Boarding starts approximately" Style="{StaticResource TripCardHeading2W}" />
+        <Label Style="{StaticResource TripCardHeadingW}" HorizontalOptions="Start" Text="30 min" />
+        <Label VerticalTextAlignment="Center" VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="prior to flight departure" Style="{StaticResource TripCardHeading2W}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentView>

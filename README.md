@@ -1,2 +1,1 @@
-# Nacelle.KMA
-Kulula Mobile pp
+Please see [project wiki](wiki/README.md) in the *wiki* folder

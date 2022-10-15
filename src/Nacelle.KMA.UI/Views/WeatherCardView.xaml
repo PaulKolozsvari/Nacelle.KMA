@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Nacelle.KMA.UI.Views.WeatherCardView"
+             x:Name="this">
+    <Frame Style="{StaticResource BoxedFilled}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ffimageloadingsvg:SvgCachedImage Grid.Column="1" Grid.RowSpan="3" Source="{Binding Icon, Converter={StaticResource WeatherImgToSvg}, Source={x:Reference this}}" VerticalOptions="End" HorizontalOptions="Center" WidthRequest="64" HeightRequest="64" />
+                <Label Grid.Row="0" Style="{StaticResource Heading2W}" Text="{Binding Synopsis, Source={x:Reference this}}}" />
+                <Label Grid.Row="1" Style="{StaticResource Heading3W}" Text="{Binding City, Source={x:Reference this}}}" />
+                <Label Grid.Row="2" Style="{StaticResource Heading1W}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding Temperature, Source={x:Reference this}}" />
+                            <Span Text="&#176;C"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </Frame>          
+</ContentView>

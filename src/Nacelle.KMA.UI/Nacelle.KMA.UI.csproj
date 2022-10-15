@@ -1,0 +1,213 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="6.2.3" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.2.3" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.2.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
+    <PackageReference Include="Refractored.XamForms.PullToRefresh" Version="2.4.1" />
+    <PackageReference Include="CardsView" Version="2.1.4" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
+    <PackageReference Include="XF.Material" Version="1.4.1.3" />
+    <PackageReference Include="SkiaSharp" Version="1.68.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Nacelle.KMA.Core\Nacelle.KMA.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MyView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\Tabs\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\Styles.xaml.cs">
+      <DependentUpon>Styles.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TripCardWithBanner.xaml.cs">
+      <DependentUpon>TripCardWithBanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CheckInDateTimeCardView.xaml.cs">
+      <DependentUpon>CheckInDateTimeCardView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\!Base\" />
+    <Folder Include="Pages\Tabs\" />
+    <Folder Include="Pages\FindBooking\" />
+    <Folder Include="Pages\FlightBooking\" />
+    <Folder Include="Templates\" />
+    <Folder Include="Pages\FAQ\" />
+    <Folder Include="Pages\CheckIn\" />
+    <Folder Include="Services\" />
+    <Folder Include="Types\" />
+    <Folder Include="Views\ButtonSelector\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Pages\FlightDetails\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="Views\ShareSelector\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Images\flight-and-bag-cover.svg" />
+    <None Remove="Resources\Images\iron-icon-dietary-requirements.svg" />
+    <None Remove="Resources\Images\iron-icon-extra-bags.svg" />
+    <None Remove="Resources\Images\iron-icon-prepaid-seats.svg" />
+    <None Remove="Resources\Images\iron-icon-q-jump.svg" />
+    <None Remove="Resources\Images\iron-icon-slow-xs-lounge.svg" />
+    <None Remove="Resources\Images\iron-icon-special-request.svg" />
+    <None Remove="Resources\Images\iron-icon-traveller-seated.svg" />
+    <None Remove="Resources\Images\iron-icon-warning.svg" />
+    <None Remove="Resources\Images\kma-logo.svg" />
+    <None Remove="Resources\Images\menu-app.svg" />
+    <None Remove="Resources\Images\menu-book-flight.svg" />
+    <None Remove="Resources\Images\menu-cart.svg" />
+    <None Remove="Resources\Images\menu-chat.svg" />
+    <None Remove="Resources\Images\menu-contact-us.svg" />
+    <None Remove="Resources\Images\menu-edit.svg" />
+    <None Remove="Resources\Images\menu-globe.svg" />
+    <None Remove="Resources\Images\menu-help.svg" />
+    <None Remove="Resources\Images\seated-passenger.svg" />
+    <None Remove="Resources\Images\menu-search.svg" />
+    <None Remove="Resources\Images\menu-edit-square.svg" />
+    <None Remove="Resources\Images\iron-icon-flight-and-bag-cover.svg" />
+    <None Remove="Resources\Images\icon-plane.svg" />
+    <None Remove="Resources\Images\arrowhead-right-blue.svg" />
+    <None Remove="Resources\Images\arrowhead-right-black.svg" />
+    <None Remove="Resources\Images\arrowhead-right-green.svg" />
+    <None Remove="Resources\Images\arrowhead-right-white.svg" />
+    <None Remove="Resources\Images\arrowhead-right-gray.svg" />
+    <None Remove="Resources\Images\vertical-dots-white.svg" />
+    <None Remove="Resources\Images\vertical-dots-green.svg" />
+    <None Remove="Resources\Images\vertical-dots-black.svg" />
+    <None Remove="Resources\Images\kma-logo-color.svg" />
+    <None Remove="Resources\Images\warning-blue.svg" />
+    <None Remove="Resources\Images\warning-red.svg" />
+    <None Remove="Resources\Images\icon-plane-white-large.svg" />
+    <None Remove="Resources\Images\time-white.svg" />
+    <None Remove="Resources\Images\icon-passenger-seated.svg" />
+    <None Remove="Resources\Images\unavailable-seat.svg" />
+    <None Remove="Resources\Images\selected-seat-traveller.svg" />
+    <None Remove="Resources\Images\available-seat-active.svg" />
+    <None Remove="Resources\Images\available-seat-inactive.svg" />
+    <None Remove="Resources\Images\selected-seat-active.svg" />
+    <None Remove="Resources\Images\iron-icon-warning %28copy%29.svg" />
+    <None Remove="Resources\Images\weather-day-broken-clouds.svg" />
+    <None Remove="Resources\Images\weather-day-clear-sky.svg" />
+    <None Remove="Resources\Images\weather-day-few-clouds.svg" />
+    <None Remove="Resources\Images\weather-day-mist.svg" />
+    <None Remove="Resources\Images\weather-day-rain.svg" />
+    <None Remove="Resources\Images\weather-day-scattered-clouds" />
+    <None Remove="Resources\Images\weather-day-scattered-clouds.svg" />
+    <None Remove="Resources\Images\weather-day-shower-rain.svg" />
+    <None Remove="Resources\Images\weather-day-snow.svg" />
+    <None Remove="Resources\Images\weather-day-thunderstorm.svg" />
+    <None Remove="Resources\Images\weather-night-broken-clouds.svg" />
+    <None Remove="Resources\Images\weather-night-clear-sky.svg" />
+    <None Remove="Resources\Images\weather-night-few-clouds.svg" />
+    <None Remove="Resources\Images\weather-night-mist.svg" />
+    <None Remove="Resources\Images\weather-night-rain.svg" />
+    <None Remove="Resources\Images\weather-night-scattered-clouds.svg" />
+    <None Remove="Resources\Images\weather-night-shower-rain.svg" />
+    <None Remove="Resources\Images\weather-night-snow.svg" />
+    <None Remove="Resources\Images\weather-night-thunderstorm.svg" />
+    <None Remove="Resources\Images\icon-passenger-infant.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Images\iron-icon-flight-and-bag-cover.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\iron-icon-dietary-requirements.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-extra-bags.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-prepaid-seats.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-q-jump.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-slow-xs-lounge.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-special-request.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-traveller-seated.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-warning.svg" />
+    <EmbeddedResource Include="Resources\Images\kma-logo.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-app.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-cart.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-chat.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-edit.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-globe.svg" />
+    <EmbeddedResource Include="Resources\Images\seated-passenger.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-search.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-book-flight.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-help.svg" />
+    <EmbeddedResource Include="Resources\Images\menu-contact-us.svg" />
+    <EmbeddedResource Include="Resources\Images\iron-icon-flight-and-bag-cover.svg" />
+    <EmbeddedResource Include="Resources\Images\icon-plane.svg" />
+    <EmbeddedResource Include="Resources\Images\arrowhead-right-blue.svg" />
+    <EmbeddedResource Include="Resources\Images\arrowhead-right-black.svg" />
+    <EmbeddedResource Include="Resources\Images\arrowhead-right-green.svg" />
+    <EmbeddedResource Include="Resources\Images\arrowhead-right-white.svg" />
+    <EmbeddedResource Include="Resources\Images\arrowhead-right-gray.svg" />
+    <EmbeddedResource Include="Resources\Images\vertical-dots-white.svg" />
+    <EmbeddedResource Include="Resources\Images\vertical-dots-green.svg" />
+    <EmbeddedResource Include="Resources\Images\vertical-dots-black.svg" />
+    <EmbeddedResource Include="Resources\Images\kma-logo-color.svg" />
+    <EmbeddedResource Include="Resources\Images\warning-blue.svg" />
+    <EmbeddedResource Include="Resources\Images\warning-red.svg" />
+    <EmbeddedResource Include="Resources\Images\icon-plane-white-large.svg" />
+    <EmbeddedResource Include="Resources\Images\time-white.svg" />
+    <EmbeddedResource Include="Resources\Images\icon-passenger-seated.svg" />
+    <EmbeddedResource Include="Resources\Images\unavailable-seat.svg" />
+    <EmbeddedResource Include="Resources\Images\selected-seat-traveller.svg" />
+    <EmbeddedResource Include="Resources\Images\available-seat-active.svg" />
+    <EmbeddedResource Include="Resources\Images\available-seat-inactive.svg" />
+    <EmbeddedResource Include="Resources\Images\selected-seat-active.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-broken-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-clear-sky.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-few-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-mist.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-rain.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-scattered-clouds" />
+    <EmbeddedResource Include="Resources\Images\weather-day-scattered-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-shower-rain.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-snow.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-day-thunderstorm.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-broken-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-clear-sky.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-few-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-mist.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-rain.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-scattered-clouds.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-shower-rain.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-snow.svg" />
+    <EmbeddedResource Include="Resources\Images\weather-night-thunderstorm.svg" />
+    <EmbeddedResource Include="Resources\Images\icon-passenger-infant.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\FlightExtras\FlightExtrasPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TripCardWithBannerCoverFlowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

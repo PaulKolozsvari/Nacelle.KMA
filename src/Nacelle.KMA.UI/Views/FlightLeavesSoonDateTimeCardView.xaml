@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nacelle.KMA.UI.Views.FlightLeavesSoonDateTimeCardView">
+    <!--<StackLayout BackgroundColor="{StaticResource LargeDetailBoxColor}" Padding="20">
+        <Label Text="Flight leaves 2" FontAttributes="Bold" TextColor="White" />
+        <Label Style="{StaticResource VeryBoldLabelStyle}" HorizontalOptions="Start" Text="30 min" />
+        <Label VerticalTextAlignment="Center" VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="soon" TextColor="White" FontSize="24" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>-->
+    <StackLayout BackgroundColor="{StaticResource Blue5}" Padding="20,10">
+        <Label Text="Flight leaves" Style="{StaticResource TripCardHeading2W}" />
+        <Label  Style="{StaticResource TripCardHeadingW}" HorizontalOptions="Start" Text="soon" />
+    </StackLayout>
+</ContentView>

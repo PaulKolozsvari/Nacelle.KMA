@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Mvx:MvxContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+    x:Class="Nacelle.KMA.UI.Pages.SelectTravellerView">
+    <StackLayout 
+        VerticalOptions="Center" 
+        HorizontalOptions="FillAndExpand" 
+        BackgroundColor="Transparent">
+        <Frame BackgroundColor="{StaticResource PrimaryWhite}" CornerRadius="20">
+            <StackLayout 
+                x:Name="travellerList"
+                BackgroundColor="White"
+                BindableLayout.ItemsSource="{Binding AllTravellers}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Style="{StaticResource Container}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Index}" HorizontalTextAlignment="Start" />
+                                <Label Grid.Column="1" Text="{Binding Name}" HorizontalTextAlignment="Start" />
+                                <Label Grid.Column="2" Text="{Binding SeatDescription}" HorizontalTextAlignment="End" />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        NumberOfTapsRequired="1" 
+                                        Command="{Binding Path=BindingContext.SelectTravellerCommand, Source={x:Reference Name=travellerList}}"  
+                                        Tapped="Handle_Tapped"
+                                        CommandParameter="{Binding .}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</Mvx:MvxContentView>

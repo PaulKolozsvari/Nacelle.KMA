@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Nacelle.KMA.UI.Views.GateCardView">
+    <ContentView.Content>
+        <Frame Style="{StaticResource BoxedBordered}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource Heading6}" Text="Terminal" />
+                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource Heading6}" Text="Gate" />
+                <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource Heading2}" Text="{Binding Terminal}" HorizontalOptions="Start" />
+                <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource Heading2}" Text="{Binding Gate}"  HorizontalOptions="Start"/>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

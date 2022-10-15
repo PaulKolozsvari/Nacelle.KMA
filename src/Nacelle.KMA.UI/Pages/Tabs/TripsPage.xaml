@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:RefreshableContentPage
+    x:TypeArguments="viewModels:TripsViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.TripsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages" 
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views;assembly=Nacelle.KMA.UI"
+    xmlns:templates="clr-namespace:Nacelle.KMA.UI.Templates;assembly=Nacelle.KMA.UI"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:pull="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+    Title="Trips" Icon="TabIconTrips"
+    Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="TripItemTemplate">
+                <StackLayout>
+                    <views:TripCardSummary Expanded="{Binding IsSummaryMode, Converter={StaticResource InverseBoolean}}"
+                                           Day="{Binding Day}"
+                                           Month="{Binding FromTime, Converter={StaticResource StringFormat}, ConverterParameter='{0:MMM}'}"
+                                           Year="{Binding FromTime, Converter={StaticResource StringFormat}, ConverterParameter='{0:yyyy}'}"
+                                           Caption="{Binding Caption}"
+                                           BookingReference="{Binding BookingReference}"
+                                           ToggleExpandedCommand="{Binding ToggleSummaryModeCommand}"
+                                           TripMenuItems="{Binding BindingContext.TripMenuItems, Source={x:Reference TripsStack}}"
+                                           TripItemMenuCommand="{Binding Path=BindingContext.TripItemMenuCommand, Source={x:Reference TripsStack}}"
+                                           x:Name="TripCardSummary"
+                                           Margin="-20, 0"/>
+                    <StackLayout x:Name="TripsStackView" 
+                                 BindableLayout.ItemsSource="{Binding FlightItems}" 
+                                 IsVisible="{Binding IsSummaryMode, Converter={StaticResource InverseBoolean}}"
+                                 Margin="0">
+                        <BindableLayout.ItemTemplate>
+                             <DataTemplate> 
+                                <views:TripCardDetail Caption="{Binding Caption}"
+                                                      Number="{Binding Number}"
+                                                      FlightDateTime="{Binding FlightDateTimeSpan}"
+                                                      CheckInButtonIsVisible="{Binding IsCheckInVisible}"
+                                                      ViewBoardingPassButtonIsVisible="{Binding HasCheckedIn}"
+                                                      CheckInCommand="{Binding CheckInCommand}"
+                                                      ViewBoardingPassCommand="{Binding ViewBoardingPassCommand}"
+                                                      FlightDetailCommand="{Binding Path=BindingContext.FlightDetailCommand, Source={x:Reference TripCardSummary}}"/>
+                             </DataTemplate>   
+                         </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </StackLayout> 
+            </DataTemplate>
+            <DataTemplate x:Key="TripDateSectionHeaderTemplate">
+                <StackLayout Orientation="Horizontal" Margin="0, 10">
+                    <Label Style="{StaticResource Heading5}" FontAttributes="Bold" Text="{Binding FromTime, Converter={StaticResource StringFormat}, ConverterParameter='{0:MMMM}'}"/>
+                    <Label Style="{StaticResource Heading5}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" FontAttributes="Bold" Text="{Binding FromTime, Converter={StaticResource StringYear}, ConverterParameter='{0:yyyy}'}"/>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="PastTripsSectionHeaderTemplate">
+                <StackLayout Orientation="Horizontal">
+                    <Label Style="{StaticResource Paragraph}" Margin="0, 20, 0, -5" Text="Past Trips"/>
+                </StackLayout>
+            </DataTemplate>
+            <templates:TripItemTemplateDataSelector x:Key="tripItemTemplateSelector"
+                                                    TripItemTemplate="{StaticResource TripItemTemplate}"
+                                                    TripDateSectionHeaderTemplate="{StaticResource TripDateSectionHeaderTemplate}"
+                                                    PastTripsSectionHeaderTemplate="{StaticResource PastTripsSectionHeaderTemplate}"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Style="{StaticResource Container}">
+        <Grid>
+            <Label Text="Add a trip" HorizontalOptions="End" Style="{StaticResource hyperLink}" Margin="10, 0"
+                IsVisible="{Binding BookingManager.TripItems, Converter={StaticResource HasItems}}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Handle_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <views:MaterialMenu x:Name="MaterialMenu" ButtonType="Text" CornerRadius="24" HorizontalOptions="End" Choices="{Binding MainMenuItems}" MenuSelected="Handle_MenuSelected"  />
+        </Grid>
+        <pull:PullToRefreshLayout x:Name="PullToRefresh"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="3"
+                  IsPullToRefreshEnabled="{Binding BookingManager.TripItems, Converter={StaticResource HasItems}, Mode=OneWay}"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsBusy}"
+                  RefreshColor="{StaticResource Green2}">
+        <ScrollView>
+            <StackLayout>
+                    <Label Text="My trips" Style="{StaticResource Heading1}" />
+                    <StackLayout IsVisible="{Binding BookingManager.TripItems, Converter={StaticResource InverseHasItems}}">
+                    <Label Text="You currently have no trips loaded." Style="{StaticResource Heading5}" />
+                    <Button Text="FIND A BOOKING" Style="{StaticResource PrimaryButtonLarge}" Command="{Binding FindBookingCommand}" />
+                    <Button Text="BOOK A FLIGHT" Style="{StaticResource SecondaryButtonLarge}" Command="{Binding BookFlightCommand}" />
+                </StackLayout>
+                <StackLayout x:Name="TripsStack" 
+                             BindableLayout.ItemsSource="{Binding BookingManager.TripItems}"  
+                             BindableLayout.ItemTemplateSelector="{StaticResource tripItemTemplateSelector}"
+                             IsVisible="{Binding BookingManager.TripItems, Converter={StaticResource HasItems}}" />
+            </StackLayout>
+        </ScrollView>
+        </pull:PullToRefreshLayout>
+    </StackLayout>    
+</local:RefreshableContentPage>            

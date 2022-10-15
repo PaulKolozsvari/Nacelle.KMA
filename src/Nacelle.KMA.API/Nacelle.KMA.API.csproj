@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Contracts\" />
+    <Folder Include="Models\Responses\Common\" />
+    <Folder Include="Configs\" />
+    <Folder Include="Models\Responses\!Base\" />
+    <Folder Include="Models\Common\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Exceptions\Contracts\" />
+    <Folder Include="Exceptions\Factories\" />
+    <Folder Include="Exceptions\Extensions\" />
+    <Folder Include="ExtensionMethods\" />
+    <Folder Include="Models\Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nacelle.Core\Nacelle.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\KeyStoreService.cs" />
+  </ItemGroup>
+</Project>

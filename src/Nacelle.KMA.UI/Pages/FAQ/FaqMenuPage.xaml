@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:FaqMenuViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.FaqMenuPage"
+    x:Name="FaqMenuView"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    NavigationPage.HasNavigationBar="false"
+    Title="FAQ" Icon="TabIconHome"
+    Visual="Material"
+    ios:Page.UseSafeArea="True">
+    <StackLayout Style="{StaticResource Container}">
+        <views:BackNavButton />
+        <Label Text="FAQ"
+               Style="{StaticResource Heading1}" />
+        <ScrollView>
+            <StackLayout>
+            <Label Style="{StaticResource Paragraph}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Below are some questions you might find useful with regards to the kulula.com mobile app. For more information or to read the full list of FAQ’s, please visit our website at " />
+                        <Span Style="{StaticResource hyperLink}" Text="www.kulula.com">
+                            <Span.GestureRecognizers>
+                                  <TapGestureRecognizer Command="{Binding KululaURLCommand, Mode=OneWay}" NumberOfTapsRequired="1"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <StackLayout BindableLayout.ItemsSource="{Binding QuestionItems}" x:Name="QuestionsStackView">
+                <BindableLayout.ItemTemplate>
+                   <DataTemplate>
+                            <Grid HeightRequest="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Title}" VerticalOptions="Center" Style="{StaticResource Heading5}"  />
+                                 <Label FontFamily="{DynamicResource GlyphFontFamily}" 
+                                       Text="{x:Static constants:IconFont.RightOpen}" 
+                                       VerticalOptions="Center" HorizontalOptions="End"
+                                       FontSize="13"
+                                       Margin="0,0, 0, 0"
+                                        />
+                                <BoxView VerticalOptions="End" HeightRequest="0.5" Color="{StaticResource PrimaryGrey}" Grid.ColumnSpan="2"  />
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.DisplayFaqCommand, Source={x:Reference QuestionsStackView}}" CommandParameter="{Binding}" NumberOfTapsRequired="1"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                    </DataTemplate>
+                    
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</local:BaseContentPage>

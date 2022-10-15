@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+    x:Class="Nacelle.KMA.UI.Views.BackNavButton">
+    <ContentView.Content>
+          <Label FontFamily="{DynamicResource GlyphFontFamily}" 
+               Text="{x:Static constants:IconFont.LeftOpen}" 
+               FontSize="25"
+               Margin="0,0, 0, 0"
+               TextColor="{StaticResource PrimaryGreen}">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CloseCommand}" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>        
+    </ContentView.Content>
+</ContentView>

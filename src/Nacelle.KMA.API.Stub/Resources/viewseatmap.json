@@ -1,0 +1,3884 @@
+{
+    "results": [
+        {
+            "seatMapRef": "S1",
+            "status": [
+                {
+                    "type": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "seatMapRef": "S2",
+            "status": [
+                {
+                    "type": "SUCCESS"
+                }
+            ]
+        }
+    ],
+    "seatMap": [
+        {
+            "cabin": [
+                {
+                    "bookingClass": "Y",
+                    "column": [
+                        {
+                            "id": "C1",
+                            "name": "A"
+                        },
+                        {
+                            "id": "C2",
+                            "name": "B"
+                        },
+                        {
+                            "characteristic": [
+                                {
+                                    "location": "RIGHT",
+                                    "value": "AISLE"
+                                }
+                            ],
+                            "id": "C3",
+                            "name": "C"
+                        },
+                        {
+                            "characteristic": [
+                                {
+                                    "location": "LEFT",
+                                    "value": "AISLE"
+                                }
+                            ],
+                            "id": "C4",
+                            "name": "D"
+                        },
+                        {
+                            "id": "C5",
+                            "name": "E"
+                        },
+                        {
+                            "id": "C6",
+                            "name": "F"
+                        }
+                    ],
+                    "row": [
+                        {
+                            "characteristic": [
+                                "EXIT"
+                            ],
+                            "number": "1",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1A",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1B",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1C",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1D",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1E",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1F",
+                                        "status": "BLOCKED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "2",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "2F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "3",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "4",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "5",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "6",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "7",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "8",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "9",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "10",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "11",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11A",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11B",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11C",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11D",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11E",
+                                        "status": "BLOCKED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "blockCode": "Z",
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "11F",
+                                        "status": "BLOCKED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "12",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "12F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "13",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "13F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "14",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "15",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "15F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "16",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "16F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "17",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "17F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "18",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "19",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "20",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "21",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "22",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "23",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "24",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "25",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "26",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "27",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "28",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "29",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT"
+                            ],
+                            "number": "30",
+                            "slot": [
+                                {
+                                    "columnRef": "C1",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C2",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C3",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C4",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C5",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C6",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "30F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "id": "S1",
+            "requestedSegment": {
+                "airline": "MN",
+                "arrivalAirport": "JNB",
+                "bookingClass": "J",
+                "departureAirport": "CPT",
+                "departureDate": "2019-05-31",
+                "flightNumber": "122",
+                "id": "rs1",
+                "operatingAirline": "MN",
+                "operatingFlightNumber": "122"
+            },
+            "segment": {
+                "airline": "MN",
+                "arrivalAirport": "JNB",
+                "bookingClass": "Y",
+                "departureAirport": "CPT",
+                "departureDate": "2019-05-31",
+                "equipment": "32S",
+                "flightNumber": "122"
+            }
+        },
+        {
+            "cabin": [
+                {
+                    "bookingClass": "Y",
+                    "column": [
+                        {
+                            "id": "C7",
+                            "name": "A"
+                        },
+                        {
+                            "id": "C8",
+                            "name": "B"
+                        },
+                        {
+                            "characteristic": [
+                                {
+                                    "location": "RIGHT",
+                                    "value": "AISLE"
+                                }
+                            ],
+                            "id": "C9",
+                            "name": "C"
+                        },
+                        {
+                            "characteristic": [
+                                {
+                                    "location": "LEFT",
+                                    "value": "AISLE"
+                                }
+                            ],
+                            "id": "C10",
+                            "name": "D"
+                        },
+                        {
+                            "id": "C11",
+                            "name": "E"
+                        },
+                        {
+                            "id": "C12",
+                            "name": "F"
+                        }
+                    ],
+                    "row": [
+                        {
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT"
+                            ],
+                            "number": "1",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "1C",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "slot": [
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "BULKHEAD"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT"
+                            ],
+                            "number": "2",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "2F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "3",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "3F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "4",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "4F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "5",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "5F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "6",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "6F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "7",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "7F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "8",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "8F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "9",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "9F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "10",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "10F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "11",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11D",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11E",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "11F",
+                                        "status": "OCCUPIED"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "12",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "12F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "14",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14A",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14B",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14C",
+                                        "status": "OCCUPIED"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "14F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "15",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "15F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "16",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "16F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT",
+                                "WING"
+                            ],
+                            "number": "17",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "17F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "18",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "18F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "19",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "facility": [
+                                        {
+                                            "location": "CENTER",
+                                            "type": "LOUNGE"
+                                        }
+                                    ],
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "19F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "20",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "20F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "WING"
+                            ],
+                            "number": "21",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "21F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "22",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "22F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "23",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "23F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "24",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "24F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "25",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "25F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "26",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "26F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "27",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "27F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "28",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "28F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "29",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "29F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "30",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "30F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "31",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "31F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "number": "32",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "number": "32F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "characteristic": [
+                                "EXIT"
+                            ],
+                            "number": "33",
+                            "slot": [
+                                {
+                                    "columnRef": "C7",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33A",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C8",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33B",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C9",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33C",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C10",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33D",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C11",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33E",
+                                        "status": "AVAILABLE"
+                                    }
+                                },
+                                {
+                                    "columnRef": "C12",
+                                    "position": "CENTER",
+                                    "seat": {
+                                        "limitation": [
+                                            "NEXT_TO_EXIT_DOOR"
+                                        ],
+                                        "number": "33F",
+                                        "status": "AVAILABLE"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "id": "S2",
+            "requestedSegment": {
+                "airline": "MN",
+                "arrivalAirport": "CPT",
+                "bookingClass": "J",
+                "departureAirport": "JNB",
+                "departureDate": "2019-06-01",
+                "flightNumber": "127",
+                "id": "rs2",
+                "operatingAirline": "MN",
+                "operatingFlightNumber": "127"
+            },
+            "segment": {
+                "airline": "MN",
+                "arrivalAirport": "CPT",
+                "bookingClass": "Y",
+                "departureAirport": "JNB",
+                "departureDate": "2019-06-01",
+                "equipment": "738",
+                "flightNumber": "127"
+            }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+Comair's design asset folder: https://www.dropbox.com/sh/zr8mmzmynjf9ik6/AACDMSBiAYuncWM2BST5qy9ya?dl=0
+ 
+https://dx.dx01.cert.aws.sabre.com/dx/MNDX/#/ to make bookings. (received sprint 5)
+previously received
+https://cert-discovery.kulula.com/discovery/login/success?code=MOCK1115 (credit card: 4242424242424242)
+https://cert-www.kulula.com/ of https://cert-discovery.kulula.com/ (credit card: 4444333322221111)
+ 
+API ENDPOINTS:
+ 
+Development:    https://dev-api.kulula.com (this is the endpoint you should be accessing right now for you development effort)
+Test / Cert:       https://cert-api.kulula.com (this will be used for Comair UAT testing)
+Production:       https://api.kulula.com (This will be the production endpoint)
+ 
+Signed off prototype: https://projects.invisionapp.com/share/59N8LWZSXMC#/screens/311505090
+password: smilehighclub
+
+
+
+
+KMA API
+
+Development:    https://dev-api.kulula.com (this is the endpoint you should be accessing right now for you development effort)
+Test / Cert:       https://cert-api.kulula.com (this will be used for Comair UAT testing)
+Production:       https://api.kulula.com (This will be the production endpoint)
+API PROD key
+
+Dev: jm4kknyrsaez6g9q7kac3m3v
+Cert: 8xzterbzb6r9m93kkxpfhr5d
+PROD: API.kulula.com – KMA : u8v2zfadb4nrzbd5rsfmy5st
+SessionToken
+
+
+  
+CERT: 
+/OPSAPI: 218835B7-C83D-4992-BAC8-2A87B0A665E5
+
+/NOTIFICATIONS: 218835B7-C83D-4992-BAC8-2A87B0A665E5
+
+DEV:
+
+/OPSAPI: CF2944B1-54FE-4F6E-9B8C-E3CD5302481D
+
+ 
+
+Please update SessionToken key in Headers for PROD as follows:
+
+/OPSAPI to E5F4FF13-B494-4903-9973-F9FAC8F8A5B0.
+/NOTIFICATIONS to 26CBC7FE-556C-47C4-819B-C9C6DC268860
+ 
+
+
+ You can use these cards on DX
+
+Mastercard – 
+5400000000000070
+5341700000000028
+5453010000000026
+5105105105105100
+
+Visa – 
+4001379547850585
+4005111111111169
+4005111111111151
+4005111111111144
+
+
+

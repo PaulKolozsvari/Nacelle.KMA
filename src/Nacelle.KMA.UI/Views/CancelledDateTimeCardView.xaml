@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Nacelle.KMA.UI.Views.CancelledDateTimeCardView">
+    <StackLayout BackgroundColor="{StaticResource Blue5}" Padding="20,10">
+        <Label Style="{StaticResource TripCardHeadingW}" HorizontalOptions="Start" Text="Flight cancelled" />
+        <Label Text="Call contact centre" Style="{StaticResource TripCardHeading2W}" />
+    </StackLayout>
+</ContentView>

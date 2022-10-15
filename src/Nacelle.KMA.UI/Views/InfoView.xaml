@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Nacelle.KMA.UI.Views.InfoView"
+             x:Name="this">
+    <Frame Style="{StaticResource BoxedInfo}" Margin="0,5">
+        <StackLayout Orientation="Horizontal">
+            <ffimageloadingsvg:SvgCachedImage Source="resource://Nacelle.KMA.UI.Resources.Images.warning-blue.svg" 
+                                              VerticalOptions="Start"
+                                              HorizontalOptions="Start"
+                                              WidthRequest="30" />
+            <Label Text="{Binding InfoMessage, Source={x:Reference this}}"
+                   LineBreakMode=" WordWrap"
+                   Style="{StaticResource MessageCopy}"/>
+        </StackLayout>
+    </Frame>
+</ContentView>

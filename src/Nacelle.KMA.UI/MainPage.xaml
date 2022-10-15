@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseTabbedPage 
+    x:TypeArguments="viewModels:MainViewModel" 
+    x:Class="Nacelle.KMA.UI.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages" 
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"    
+    xmlns:effects="clr-namespace:Nacelle.KMA.UI.Effects"
+    android:TabbedPage.ToolbarPlacement="Bottom"    
+    android:TabbedPage.IsSwipePagingEnabled="False"
+    BarBackgroundColor="#F9F9F9"
+    NavigationPage.HasNavigationBar="false"
+    Title=" ">
+    <TabbedPage.Effects>
+        <effects:NoShiftEffect />
+    </TabbedPage.Effects>
+</local:BaseTabbedPage>

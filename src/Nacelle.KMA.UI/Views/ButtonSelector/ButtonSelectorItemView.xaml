@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Nacelle.KMA.UI.Views.ButtonSelectorItemView">
+    <ContentView.Content>
+        <StackLayout HeightRequest="80" WidthRequest="200">
+            <Frame Padding="1" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="0" 
+                   OutlineColor="{StaticResource PrimaryBlue}" BackgroundColor="{StaticResource PrimaryBlue}">
+                <Frame x:Name="ContainerFrame" Padding="5" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                       CornerRadius="0" OutlineColor="{StaticResource PrimaryBlue}" BackgroundColor="White">
+                    <Label x:Name="TitleLabel" FontSize="12" TextColor="{StaticResource PrimaryBlue}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                </Frame>
+            </Frame>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapped" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

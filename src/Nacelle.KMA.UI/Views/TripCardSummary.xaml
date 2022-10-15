@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views;assembly=Nacelle.KMA.UI"
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms"
+    x:Class="Nacelle.KMA.UI.Views.TripCardSummary"
+    x:Name="this">
+    <Frame Style="{StaticResource Boxed}" Padding="0">
+        <Grid BackgroundColor="{Binding Expanded, Source={x:Reference this}, Converter={StaticResource TripCardIsExpandedPrimaryColor}}"
+              ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="30" />
+            </Grid.ColumnDefinitions>
+            <BoxView BackgroundColor="{Binding Expanded, Source={x:Reference this}, Converter={StaticResource TripCardIsExpandedSecondaryColor}}" />
+            <StackLayout Margin="10" HorizontalOptions="Center">
+                <Label x:Name="DayLabel" Text="{Binding Day, Source={x:Reference this}}" Style="{StaticResource TripCardHeading2W}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Month, Source={x:Reference this}, Converter={StaticResource StringToUpperCase}}" Style="{StaticResource TripCardHeading2W}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Margin="10">
+                <Label Text="{Binding Caption, Source={x:Reference this}}" Style="{StaticResource TripCardHeading2W}" VerticalOptions="CenterAndExpand"/>
+                <Label Text="{Binding BookingReference, Source={x:Reference this}, StringFormat='Booking reference: {0}'}" Style="{StaticResource TripCardContentW}" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <ffimageloadingsvg:SvgCachedImage Grid.Column="2" Margin="0, 10, 16, 10" IsVisible="{Binding Expanded, Source={x:Reference this}, Converter={StaticResource InverseBoolean}}" VerticalOptions="Center" HeightRequest="23" Source="resource://Nacelle.KMA.UI.Resources.Images.arrowhead-right-white.svg"/>
+            <material:MaterialMenuButton x:Name="MaterialMenu" Grid.Column="2" IsVisible="{Binding Expanded, Source={x:Reference this}}" Margin="0,5,5,5" ButtonType="Text" Choices="{Binding TripMenuItems, Source={x:Reference this}}" MenuSelected="Handle_MenuSelected"  Image="VerticalEllipse" />            
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding ToggleExpandedCommand, Source={x:Reference this}}" CommandParameter="{Binding}" />
+            </Grid.GestureRecognizers>                                
+        </Grid>
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding ToggleExpandedCommand, Source={x:Reference this}}" CommandParameter="{Binding}" />
+        </Frame.GestureRecognizers>
+    </Frame>
+</ContentView>

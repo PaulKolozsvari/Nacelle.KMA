@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Nacelle.KMA.UI.Pages.CountrySelectorPopup"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <ListView
+        x:Name="countrySelectorLayout"
+        ItemsSource="{Binding .}"
+        ItemSelected="Handle_ItemSelected"
+        BackgroundColor="White"
+        Margin="30, 50"
+        VerticalOptions="FillAndExpand"
+        ios:ListView.SeparatorStyle="FullWidth" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label
+                        Text="{Binding Name}" 
+                        Margin="20,10" />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <!-- remove empty cells at bottom of listview -->
+        <ListView.Footer>
+            <Label />
+        </ListView.Footer>
+    </ListView>
+</rg:PopupPage>

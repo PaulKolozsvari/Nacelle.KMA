@@ -1,0 +1,41 @@
+# Xamarin.Android
+# Build a Xamarin.Android project.
+# Add steps that test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin
+
+trigger:
+- develop
+
+pool:
+  vmImage: 'macOS-10.13'
+
+variables:
+  buildConfiguration: 'Release'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+
+steps:
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/*.sln'
+
+- task: Bash@3
+  inputs:
+    filePath: './build.cake.bootstrap.sh'
+
+- task: Bash@3
+  inputs:
+    filePath: './build.sh'
+    arguments: '-target=RunTests'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: 'VSTest'
+    testResultsFiles: '**/Nacelle.KMA.UI.Tests.xml'
+    
+- task: XamarinAndroid@1
+  inputs:
+    projectFile: '**/*.Droid.csproj'
+    outputDirectory: '$(outputDirectory)'
+    configuration: '$(buildConfiguration)'

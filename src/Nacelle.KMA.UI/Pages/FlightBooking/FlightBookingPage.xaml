@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:FlightBookingViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.FlightBookingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:constants="clr-namespace:Nacelle.KMA.UI" 
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    NavigationPage.HasNavigationBar="false"
+    ios:Page.UseSafeArea="true"
+    Icon="TabIconHome"
+    Visual="Material">
+        <StackLayout Style="{StaticResource Container}">
+            <views:BackNavButton />
+            <Label Text="Book a flight"
+                   Style="{StaticResource Heading1}"/>        
+            <Label Style="{StaticResource Paragraph}">
+                <Label.FormattedText>
+                    <FormattedString>
+                         <Span Text="You'll need to visit our website to make a flight booking. Would you like to proceed to " />
+                         <Span Text="www.kulula.com" Style="{StaticResource hyperLink}" />                              
+                         <Span Text="?"  />                              
+                     </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Grid Margin="0, 10" BackgroundColor="{StaticResource InfoLight}" Padding="10, 10, 10, 20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label FontFamily="{StaticResource GlyphFontFamily}" Text="{x:Static constants:IconFont.AttentionCircled}" FontSize="28" TextColor="{StaticResource InfoDark}" />
+                <StackLayout Grid.Column="1" >
+                <Label Text="Did you know" Style="{StaticResource MsgHeadingInfo}" />
+                <Label Style="{StaticResource Paragraph}" Text="You can create your very own travel package by simply combining your flight booking with a car or hotel reservation. Look for the 'combine and save' options when you book your trip." />
+                </StackLayout>
+            </Grid>
+            <Grid Margin="0, 30">
+                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition  />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Style="{StaticResource SecondaryButtonLarge}" Text="NO THANKS" Command="{Binding CancelCommand}" />
+                <Button Grid.Column="1" Style="{StaticResource PrimaryButtonLarge}" Text="CONTINUE" Command="{Binding ContinueCommand}" />
+            </Grid>
+        </StackLayout>
+</local:BaseContentPage>

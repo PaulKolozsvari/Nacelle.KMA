@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="Nacelle.KMA.UI.Pages.BookingCheckInHeaderView">
+    <ContentView.Content>
+        <Grid HeightRequest="80">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ffimageloading:CachedImage
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Aspect="AspectFill"
+                DownsampleToViewSize="true"
+                Source="{Binding To, Converter={StaticResource StringFormat}, ConverterParameter='CityHeader{0}'}" />
+            <Label
+                Grid.Column="0"
+                Style="{StaticResource TripCardHeadingW}"
+                Text="{Binding From}" />
+            <ffimageloadingsvg:SvgCachedImage
+                Grid.Column="1"
+                HeightRequest="80"
+                Source="resource://Nacelle.KMA.UI.Resources.Images.icon-plane-white-large.svg"
+                Margin="15"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Column="2"
+                Style="{StaticResource TripCardHeadingW}"
+                Text="{Binding To}" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

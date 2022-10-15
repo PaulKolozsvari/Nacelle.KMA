@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:AboutViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    NavigationPage.HasNavigationBar="false"
+    Title="About"
+    Visual="Material">
+<ScrollView>
+        <StackLayout Style="{StaticResource Container}">
+                <views:BackNavButton />
+                <Label Text="About"
+               Style="{StaticResource Heading1}" />
+                <Label Style="{StaticResource Paragraph}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="The official kulula.com travel app for " />
+                        <Span Text="{Binding Platform}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Style="{StaticResource Paragraph}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="App version " />
+                        <Span Text="{Binding AppVersion}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Style="{StaticResource Paragraph}" Text="Copyright © kulula.com" />
+            <Button Style="{StaticResource SecondaryButtonLarge}" Text="PRIVACY POLICY" Command="{Binding PrivacyPolicyCommand}" />
+            <Button Style="{StaticResource SecondaryButtonLarge}" Text="TERMS &amp; CONDITIONS" Command="{Binding TermsConditionsCommand}" />
+        </StackLayout>
+    </ScrollView>
+</local:BaseContentPage>

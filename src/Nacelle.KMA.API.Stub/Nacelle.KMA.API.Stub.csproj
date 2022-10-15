@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\findbooking.json" />
+    <EmbeddedResource Include="Resources\retrievebookingix.json" />
+    <EmbeddedResource Include="Resources\getfivedayforecast.json" />
+    <EmbeddedResource Include="Resources\updatepassenger.json" />
+    <EmbeddedResource Include="Resources\checkin.json" />
+    <EmbeddedResource Include="Resources\selectseats.json" />
+    <EmbeddedResource Include="Resources\viewseatmap.json" />
+    <EmbeddedResource Include="Resources\boardingpass.json" />
+    <EmbeddedResource Include="Resources\airport.json" />
+    <EmbeddedResource Include="Resources\getboardingpass.txt" />
+    <EmbeddedResource Include="Resources\registerdeviceid.json" />
+    <EmbeddedResource Include="Resources\getflightstatus.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nacelle.Core\Nacelle.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\findbooking.json" />
+    <None Remove="Resources\retrievebookingix.json" />
+    <None Remove="Resources\getfivedayforecast.json" />
+    <None Remove="Resources\updatepassenger.json" />
+    <None Remove="Resources\checkin.json" />
+    <None Remove="Resources\selectseats.json" />
+    <None Remove="Resources\viewseatmap.json" />
+    <None Remove="Resources\boardingpass.json" />
+    <None Remove="Resources\getboardingpass.txt" />
+    <None Remove="Resources\RegisterDeviceId.json" />
+    <None Remove="Resources\getflightstatus.json" />
+  </ItemGroup>
+</Project>

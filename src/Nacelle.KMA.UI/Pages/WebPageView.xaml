@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:WebPageViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.WebPageView"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    Title="{Binding Title}"
+    Visual="Material">
+     <WebView x:Name="EmbeddedBrowser" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="20">
+        <WebView.Source>
+             <HtmlWebViewSource Html="{Binding HtmlContent}" />
+        </WebView.Source>
+    </WebView>
+</local:BaseContentPage>

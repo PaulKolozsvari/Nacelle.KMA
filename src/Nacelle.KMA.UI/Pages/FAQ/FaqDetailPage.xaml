@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:FaqDetailViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.FaqDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    Title="FAQ" Icon="TabIconHome"
+    Visual="Material">
+    <Grid Style="{StaticResource Container}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="{Binding Title}" LineBreakMode="WordWrap" Style="{StaticResource Heading3}" />
+        <WebView x:Name="EmbeddedBrowser" Grid.Row="1" Navigating="Handle_Navigating" Navigated="Handle_Navigated" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+            <WebView.Source>
+                <HtmlWebViewSource Html="{Binding HtmlContent}" />
+            </WebView.Source>
+        </WebView>
+    </Grid>
+</local:BaseContentPage>

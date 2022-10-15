@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage 
+    x:TypeArguments="viewModels:ExitRowTermsViewModel" 
+    x:Class="Nacelle.KMA.UI.Pages.ExitRowTermsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core" 
+    NavigationPage.HasBackButton="false"
+    Title="{Binding Title}"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Command="{Binding CancelCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <views:WebViewEx x:Name="WebView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="15" Grid.Row="0">
+                <WebView.Source>
+                     <HtmlWebViewSource Html="{Binding HtmlContent}" />
+                </WebView.Source>
+            </views:WebViewEx>
+            <Grid Grid.Row="1" Style="{StaticResource Container}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>    
+                <views:CheckLabel FontSize="30" Margin="0, 10, 10, 10" IsChecked="{Binding IsTermsAccepted, Mode=TwoWay}" />
+                <Label Grid.Column="1" Text="I agree with the emergency exit row seating conditions" Style="{StaticResource MessageCopy}" />
+                <Button Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PrimaryButtonLarge}" Text="ACCEPT" mvx:Bi.nd="IsEnabled IsTermsAccepted" Command="{Binding AcceptCommand}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>      
+</local:BaseContentPage>

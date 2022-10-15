@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Nacelle.KMA.UI.Views.ShareFlightCardView"
+             x:Name="this">
+    <Frame Style="{StaticResource BoxedBordered}"> 
+        <StackLayout>
+            <Label Style="{StaticResource Heading5}" Text="Share my flight"/>
+            <Label Style="{StaticResource ContentCopy}" Text="Share your flight details with loved ones and colleagues and let them know when you arrive."/>
+            <Button Style="{StaticResource SecondaryButtonMedium}" Text="SHARE FLIGHT" Command="{Binding ShareFlightCommand}" />
+        </StackLayout>
+    </Frame>                
+</ContentView>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:behaviors="clr-namespace:Nacelle.KMA.UI.Behaviors"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Nacelle.KMA.UI.Views.TripCardWithBanner"
+             x:Name="this">
+    <Frame Padding="0"
+               Margin="25, 0, 25, 0"
+               VerticalOptions="Start"
+               CornerRadius="5"
+               BorderColor="Transparent">
+        <StackLayout Spacing="0">
+            <Frame Style="{StaticResource BoxedBordered}" Padding="0" Margin="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Grid.ColumnSpan="3"
+                   Source="{Binding HeaderImage, Source={x:Reference this}}"
+                   Aspect="AspectFill" />
+                    <Label Grid.Column="0"
+                   Style="{StaticResource TripCardHeadingW}"
+                   Text="{Binding From, Source={x:Reference this}}" />
+                    <ffimageloadingsvg:SvgCachedImage Grid.Column="1"
+                                              Source="resource://Nacelle.KMA.UI.Resources.Images.icon-plane-white-large.svg"
+                                              Margin="0, 20" />
+                    <Label Grid.Column="2"
+                   Style="{StaticResource TripCardHeadingW}"
+                   Text="{Binding To, Source={x:Reference this}}" />
+                    <StackLayout Grid.Row="1"
+                         Grid.ColumnSpan="3"
+                         Margin="10">
+                        <Label Text="{Binding Caption, Source={x:Reference this}}" Style="{StaticResource TripCardHeading2}" />
+                        <Label Text="{Binding FlightNumber, Source={x:Reference this}}" Style="{StaticResource TripCardContent}"  />
+                        <Label Text="{Binding FlightDateTime, Source={x:Reference this}}" Style="{StaticResource TripCardContent}" />
+                    </StackLayout>
+                    <ffimageloadingsvg:SvgCachedImage Grid.Column="2"
+                                              Grid.Row="1"
+                                              HorizontalOptions="End"
+                                              WidthRequest="24"
+                                              Margin="10,0"
+                                              Source="resource://Nacelle.KMA.UI.Resources.Images.arrowhead-right-gray.svg" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FlightDetailsCommand, Source={x:Reference this}}"
+                                      NumberOfTapsRequired="1" />
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Frame>
+            
+            <skiaforms:SKCanvasView BackgroundColor="{StaticResource PrimaryWhite}"
+                        PaintSurface="OnCanvasViewPaintSurface" 
+                        HorizontalOptions="FillAndExpand" 
+                        IsVisible="{Binding IsCheckInButtonVisible, Source={x:Reference this}}"
+                        Margin="5, 0"
+                        HeightRequest="0.7"  />
+            <Frame Margin="0" Style="{StaticResource TripCardButton}" IsVisible="{Binding IsCheckInButtonVisible, Source={x:Reference this}}">
+                <Button Style="{StaticResource PrimaryButtonMedium}"
+                        Image="CheckInWhite"
+                        Text="CHECK-IN NOW"
+                        Command="{Binding CheckInCommand, Source={x:Reference this}}"/>
+            </Frame>
+            <skiaforms:SKCanvasView BackgroundColor="{StaticResource PrimaryWhite}"
+                        PaintSurface="OnCanvasViewPaintSurface" 
+                        HorizontalOptions="FillAndExpand" 
+                        IsVisible="{Binding IsViewBoardingPassButtonVisible, Source={x:Reference this}}"
+                        Margin="5, 0"
+                        HeightRequest="0.7"  />
+            <Frame Margin="0" Style="{StaticResource TripCardButton}" IsVisible="{Binding IsViewBoardingPassButtonVisible, Source={x:Reference this}}">
+                <Button Style="{StaticResource PrimaryButtonMedium}"
+                        Image="QRCodeWhite"
+                        Text="VIEW BOARDING PASS"
+                        Command="{Binding ViewBoardingPassCommand, Source={x:Reference this}}"/>
+            </Frame>
+        </StackLayout>
+        <Frame.Behaviors>
+            <behaviors:CarouselItemAnimateBehavior ScaleDownTo="0.85" />
+        </Frame.Behaviors>
+    </Frame>
+</ContentView>

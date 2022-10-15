@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:views="clr-namespace:Nacelle.KMA.UI.Views;assembly=Nacelle.KMA.UI"
+      x:Class="Nacelle.KMA.UI.Views.TextMenuButton"
+      HorizontalOptions="End">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <views:MaterialMenu x:Name="MaterialMenuButton"
+                        Opacity="0"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        ButtonType="Text" />
+    <Label x:Name="Label" 
+           HorizontalOptions="End"
+           VerticalOptions="Center"
+           FontAttributes="Bold"
+           TextColor="{StaticResource PrimaryGreen}">
+        <Label.GestureRecognizers>
+            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                  Tapped="OnLabelTapped" />
+        </Label.GestureRecognizers>
+    </Label>
+</Grid>

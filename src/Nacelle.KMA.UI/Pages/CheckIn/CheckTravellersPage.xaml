@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseContentPage
+    x:TypeArguments="viewModels:CheckTravellersViewModel"
+    x:Class="Nacelle.KMA.UI.Pages.CheckTravellersPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Nacelle.KMA.UI.Pages"
+    xmlns:views="clr-namespace:Nacelle.KMA.UI.Views"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Nacelle.KMA.Core.ViewModels;assembly=Nacelle.KMA.Core"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    Title="Check-In"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Cancel"
+            Command="{Binding CancelCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ProgressBar
+                Progress="0.4"
+                ProgressColor="{StaticResource PrimaryBlue}" />
+            <StackLayout Spacing="0"
+                BindableLayout.ItemsSource="{Binding BookingItems}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <local:BookingCheckInHeaderView />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            <StackLayout Spacing="0" Style="{StaticResource Container}">
+                <Label
+              Text="Select travellers to check-in"
+              Style="{StaticResource Heading3}" />
+                <ScrollView>
+                    <StackLayout
+                        Margin="-20,10"
+                        Spacing="0"
+                        x:Name="tarvellerItems"
+                        BindableLayout.ItemsSource="{Binding TravellerItems}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Style="{StaticResource BoxedBordered}">
+                                    <StackLayout Margin="0" Spacing="0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                Width="30" />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <views:CheckLabel
+                                            Style="{StaticResource Heading2}"
+                                            IsChecked="{Binding DoCheckIn, Mode=TwoWay}" />
+                                            <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Name}"
+                                            VerticalTextAlignment="Center"
+                                            Style="{StaticResource Heading5}" />
+                                        </Grid>
+                                        <Grid IsVisible="{Binding HasInfant}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="30" />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+                                            <ffimageloadingsvg:SvgCachedImage Source="resource://Nacelle.KMA.UI.Resources.Images.icon-passenger-infant.svg" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="18" />
+                                            <Label Grid.Column="1" Text="{Binding InfantName}" VerticalTextAlignment="Center" />
+                                        </Grid>
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Command="{Binding SelectTravellerCommand, Source={x:Reference Name=tarvellerItems}}"
+                                        CommandParameter="{Binding .}"
+                                        NumberOfTapsRequired="1" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <Grid VerticalOptions="EndAndExpand" Style="{StaticResource Container}">
+                    <BoxView
+                    Grid.Row="0"
+                    BackgroundColor="{StaticResource PrimaryWhite}" />
+                    <Button
+                    Grid.Row="0"
+                    x:Name="NextButton"
+                    Style="{StaticResource PrimaryButtonLarge}"
+                    Text="NEXT"
+                    mvx:Bi.nd="IsEnabled IsNextEnabled"
+                    Command="{Binding NextCommand}" />
+                </Grid>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</local:BaseContentPage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>934999391965-32cb29202t6cjp2bev1ej1rs1oj5h9ec.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.934999391965-32cb29202t6cjp2bev1ej1rs1oj5h9ec</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXnE0DcqYH3tma729jgKU5tT7kwhEIXGY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>934999391965</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.comair.kma-cert</string>
+	<key>PROJECT_ID</key>
+	<string>kulula-travel-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kulula-travel-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:934999391965:ios:9cb26f76ece9d5b4</string>
+	<key>DATABASE_URL</key>
+	<string>https://kulula-travel-app.firebaseio.com</string>
+</dict>
+</plist>

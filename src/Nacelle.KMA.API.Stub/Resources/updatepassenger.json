@@ -1,0 +1,28 @@
+{
+    "results": [
+        {
+            "status": [
+                {
+                    "type": "SUCCESS"
+                }
+            ],
+            "update": {
+                "context": "PASSENGER_WEIGHT_CATEGORY",
+                "operation": "ADD",
+                "value": "p01.01"
+            }
+        },
+        {
+            "status": [
+                {
+                    "type": "SUCCESS"
+                }
+            ],
+            "update": {
+                "context": "PASSENGER_WEIGHT_CATEGORY",
+                "operation": "ADD",
+                "value": "p02.01"
+            }
+        }
+    ]
+}
